@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绿源农业 - 智慧农业信息平台</title>
+    <!-- <link rel="stylesheet" href="./Control_file/style.css"> -->
+</head>
+<style>
+    header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    flex-wrap: wrap;           /* ⭐允许换行 */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    row-gap: 12px;
+    
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+.logo {
+    font-size: 1.9rem;
+    /* font-weight: bold; */
+    white-space: nowrap;
+    
+}
+
+nav {
+    margin-left: auto;         /* ⭐推到右侧 */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 2px;
+}
+nav a:hover {
+    color: #000000; /* ⭐ 设置悬停颜色 */
+    background-color: rgb(255, 132, 235);
+    
+}
+.search-container {
+    flex-basis: 100%;          /* ⭐独占一整行 */
+    max-width: 500px;
+    margin: 10px auto 0;       /* ⭐居中 */
+    display: flex;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+}
+
+.search-container button {
+    padding: 10px 24px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #e68a00;
+}
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    .logo {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    nav {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    .search-container {
+        max-width: 100%;
+        margin-top: 8px;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">🌿 农业资源库</div>
+       
+        <nav>
+            <a href="#">首页</a>
+            <a href="#">蔬菜</a>
+            <a href="#">大田作物</a>
+            <a href="#">病虫害</a>
+            <a href="#">肥料</a>
+            <a href="#">药品</a>
+        </nav>
+          <div class="search-container">
+            <input type="text" id="searchInput" placeholder="尝试输入，水稻、玉米">
+            <button onclick="handleSearch()">搜索</button>
+        </div>
+    </header>
+</body>
+
+
+
+
+</html>

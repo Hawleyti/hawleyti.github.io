@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绿源农业 - 智慧农业信息平台</title>
+    <link rel="stylesheet" href="./Control_file/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌿 农业资源库</div>
+        <nav>
+            <a href="#">首页</a>
+            <a href="#">蔬菜</a>
+            <a href="#">大田作物</a>
+            <a href="#">病虫害</a>
+            <a href="#">肥料</a>
+            <a href="#">药品</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>探索农业新知，助力乡村振兴</h1>
+        <p>搜索作物、病虫害方案或今日农产品价格</p>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="尝试输入：水稻种植技术、苹果价格...">
+            <button onclick="handleSearch()">搜索</button>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <h2>热门推荐</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=500&q=60" alt="蔬菜">
+                <div class="card-body">
+                    <h3>有机蔬菜种植</h3>
+                    <p>了解如何不使用化学农药种植高品质蔬菜。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?auto=format&fit=crop&w=500&q=60" alt="灌溉">
+                <div class="card-body">
+                    <h3>智慧灌溉系统</h3>
+                    <p>节水50%以上的传感器控制技术介绍。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=500&q=60" alt="市场">
+                <div class="card-body">
+                    <h3>今日价格行情</h3>
+                    <p>全国主要农产品批发市场实时价格汇总。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 绿源农业信息平台 | 农业科技改变生活</p>
+    </footer>
+
+    <script>
+        async function handleSearch() {
+    // 1. 获取输入框的内容
+    const query = document.getElementById('searchInput').value.trim();
+    // 2. 获取下方准备显示卡片的容器
+    const resultsContainer = document.querySelector('.grid');
+
+    if (!query) {
+        alert('请输入搜索内容');
+        return;
+    }
+
+    try {
+        // 3. 向你的 Python 后端发送请求 (确保此时 app.py 正在运行)
+        const response = await fetch(`http://127.0.0.1:5000/api/search?q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+
+        // 4. 清空页面上现有的“热门推荐”内容
+        resultsContainer.innerHTML = '';
+
+        if (data.length === 0) {
+            resultsContainer.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 50px;">
+                未能找到与 "${query}" 相关的结果，请尝试其他关键词。</p>`;
+            return;
+        }
+
+        // 5. 将后端返回的数据渲染成卡片
+        data.forEach(item => {
+            resultsContainer.innerHTML += `
+                <div class="card">
+                    <img src="${item.img}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/500x300?text=无图片'">
+                    <div class="card-body">
+                        <span style="color: #2e7d32; font-size: 0.8rem; font-weight: bold;">${item.category}</span>
+                        <h3 style="margin: 5px 0;">${item.name}</h3>
+                        <p>${item.desc}</p>
+                    </div>
+                </div>
+            `;
+        });
+    } catch (error) {
+        console.error('搜索失败:', error);
+        alert('无法连接到后端服务器，请检查 Python 程序是否正在运行（端口 5000）。');
+    }
+}
+    </script>
+</body>
+</html>

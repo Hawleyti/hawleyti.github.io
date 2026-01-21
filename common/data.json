@@ -1,0 +1,17 @@
+[
+    {
+        "name": "蚜虫",
+        "category": "蔬菜",
+        "desc": "春季育秧的关键要点...",
+        "img": "https://lh3.googleusercontent.com/d/1E8LBbPHkHV_2kDAImOY0NPR10qYI2roG",
+        "url": "https://chatgpt.com/c/696e846e-4d70-8331-833a-4adc145d563d" 
+    },
+    
+    {
+        "name": "玉米行情",
+        "category": "价格",
+        "desc": "今日玉米价格走势...",
+        "img": "https://example.com/corn.jpg",
+        "url": "https://www.agri.cn/market/"
+    }
+]

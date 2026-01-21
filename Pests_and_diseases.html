@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农业资源库</title>
+    <script src="./Control_file/common.js"></script>
+    <link rel="stylesheet" href="./Control_file/style.css">
+       <script>
+        
+        if (sessionStorage.getItem('authenticated') !== 'true') {
+          window.location.href = 'Login.html';
+      }
+  </script>
+</head>
+<body>
+  <div id="replace_with_navbar"></div>  <!-- 导航栏 -->
+  <section class="insect">
+        <!-- <h1>蚜虫</h1> -->
+        
+        <!-- <div class="search-container">
+            <input type="text" id="searchInput" placeholder="尝试输入：水稻种植技术、苹果价格...">
+            <button onclick="handleSearch()">搜索</button>
+        </div> -->
+    </section>
+<div class="content">
+<table>
+    <tr>
+        <th colspan="3">一、蚜虫的习性</th>
+    </tr>
+     <tr>
+        <td class="category"rowspan="2">1.食性</td>
+         <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/15WrgvjQ0cDMf_QUPgK82lfrU20PPMQZD"onclick="openModal(this)">
+            <ul>
+                <li>蚜虫主要以植物汁液为食，利用刺吸式口器刺入植物组织，吸取韧皮部的营养液。它们偏好柔嫩的叶片、芽、茎以及花朵，部分种类还会危害果实和根系。</li>
+                <li>刺吸式口器：是取食植物汁液或动物血液的昆虫所具有的既能刺入寄主体内又能吸食寄主体液的口器。</li>
+            </ul>
+        </td>
+    </tr>
+    <tr> </tr>
+
+     <tr>
+        <td class="category"rowspan="2">2.繁殖方式</td>
+         <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/1GNrTkaT4N9Y17BkjmA5nBUEc6LVwRbB_"onclick="openModal(this)">
+            <ul>
+                <li>春夏季:大部分蚜虫以孤雌生殖（无性生殖）方式繁殖，雌蚜可以直接产下小蚜虫，无需交配，且直接是若虫（省略卵阶段），加快繁殖速度。在热带或在温室中，蚜虫可以数年一直进行无性生殖。</li>
+            </ul>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/1v2dvkYeB60HF_1mjCg--1vJSROzdbje4"onclick="openModal(this)">
+        <ul>
+            <li>秋冬季：随着气温降低，蚜虫会进行两性生殖，雄蚜 and 雌蚜交配后产卵，以卵的形式越冬，等待来年春季孵化。</li>
+        </ul>
+        </td>
+    </tr>   
+      <tr> </tr>
+    <tr>
+        <td class="category" rowspan="2">3.适宜繁殖温度、湿度</td>
+         <td>
+            <ul>
+                <li>湿度：</li>
+                <ul>
+                    <li> 湿度适中（60%~80%）：有利于蚜虫活动和繁殖，同时也减少因干燥脱水的风险。</li>
+                    <li>湿度过高（>85%）：容易引发病原菌感染，如真菌病害（白僵菌等），抑制蚜虫种群增长。</li>
+                    <li> 湿度过低（小于50%）：干燥的环境会影响蚜虫的生存，特别是在高温天气下，蚜虫更容易脱水死亡。</li>
+                </ul>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>温度：</li>
+                <ul>
+                    <li>最适温度：20℃~25℃，无性生殖活跃，蚜虫数量迅速增加。</li>
+                    <li> 低温影响：低于10℃，蚜虫生长发育减缓；低于0℃，大多数蚜虫难以存活，部分种类会以卵越冬。</li>
+                    <li>高温影响：超过30℃，蚜虫的繁殖能力下降，寿命缩短；超过35℃，蚜虫容易死亡，特别是在干燥环境下。</li>
+                </ul>
+            </ul>
+        </td>
+    </tr>
+
+
+      <tr>
+        <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/1E8LBbPHkHV_2kDAImOY0NPR10qYI2roG"onclick="openModal(this)">
+  <ul>
+    <li>繁殖速度：
+        <ul>
+            <li>在适宜温度（20~25°C）下，蚜虫可以3~7天繁殖一代。</li>
+            <li>高温（25~30°C）时，生命周期加快，3~5天即可完成一代。</li>
+            <li>低温（10~15°C）时，生长速度变慢，可能需要7~14天繁殖一代。</li>
+            <li>若虫发育4~10天即可蜕皮成为成虫，并开始繁殖。</li>
+        </ul>
+    </li>
+    </ul>
+        </td>
+    </tr>   
+
+
+<tr>
+    <td class="category">4.天敌</td>
+    <td colspan="2">
+ <div class="enemies">
+    <figure>
+        <img src="https://lh3.googleusercontent.com/d/1nwrueRUVxtrpDiw8YRwumxNhi5oBzm_R"onclick="openModal(this)">
+        <figcaption>七星瓢虫和异色瓢虫</figcaption>
+    </figure>
+       
+
+    <figure>
+        <img src="https://lh3.googleusercontent.com/d/1EKWJ7LTjSd8iQ37ouE3qVExb4QQvVs6k" onclick="openModal(this)">
+        <figcaption>草蛉虫</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://lh3.googleusercontent.com/d/1mlIYCV8eH_P9MUJ89EAxZ9Dhf8jAW0LK"onclick="openModal(this)">
+        <figcaption>食蚜蝇</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://lh3.googleusercontent.com/d/11fyKAzS-3EeXbgubHca-4evoOZ5AUk-d"onclick="openModal(this)">
+        <figcaption>寄生蜂</figcaption>
+    </figure>
+
+  <figure>
+        <img src="https://lh3.googleusercontent.com/d/1pGdotOkE2gD2Q0k7DkfFRD0OuhIv0M6J" onclick="openModal(this)">
+        <figcaption>七星瓢虫和异色瓢虫</figcaption>
+    </figure>
+    
+      <figure>
+        <img src="https://lh3.googleusercontent.com/d/1uMa8_PHv_eeJyJH1j09x7kzyBHNpDNiP"onclick="openModal(this)">
+        <figcaption>草蛉虫的卵和幼虫</figcaption>
+    </figure>
+    <figure>
+        <img src="https://lh3.googleusercontent.com/d/1vqo5d2YHop93HpHT6poPWQL4HWpYlfkp"onclick="openModal(this)" >
+        <figcaption>食蚜蝇的卵和幼虫</figcaption>
+    </figure>
+       <figure>
+        <img src="https://lh3.googleusercontent.com/d/1HaEpZv5i55a5L2cG7-ER0TNVBwIpvquI" onclick="openModal(this)">
+        <figcaption>七星瓢虫的卵和幼虫</figcaption>
+    </figure>
+
+   <figure>
+        <img src="https://lh3.googleusercontent.com/d/1PSVswEZAUjIX-kNpov_DNSaKsYXaR6WC" onclick="openModal(this)">
+        <figcaption>七星瓢虫的卵和幼虫</figcaption>
+    </figure>
+  <figure>
+        <img src="https://lh3.googleusercontent.com/d/1dc4sKfNO1RJ7sNJQtnsADwgcegCBhRAD"onclick="openModal(this)">
+        <figcaption>草蛉虫的卵和幼虫</figcaption>
+    </figure>
+         <figure>
+        <img src="https://lh3.googleusercontent.com/d/1MyoHqD7ggs1RvLQ9UYiZL5hfaFDZakDx"onclick="openModal(this)">
+        <figcaption>食蚜蝇的卵和幼虫</figcaption>
+    </figure>
+
+</div>
+
+    </td>
+</tr>
+    <tr>
+        <td class="category"rowspan="2">5.知识扩展</td>
+        <td colspan="2">
+            <b>椿象：</b>以刺吸式口器吸食寄主植物（尤其是荔枝、龙眼）的汁液，造成花穗萎凋、果皮焦黑、落花落果或生长不佳，严重甚至造成果树枯死。<br>
+            *注：有时会把椿象的卵和瓢虫的卵弄混。椿象的看见可以捏死。
+        </td>
+    <tr>
+        <td class="category" ><img src="https://lh3.googleusercontent.com/d/1_CilLVhHZYGtIlohz4-nbE5YJ1OkjGUO"onclick="openModal(this)"></td>
+        <td class="category" ><img src="https://lh3.googleusercontent.com/d/1tA_WnczcvsDtWHFFumLAJetyIWku39eh"onclick="openModal(this)"></td>
+    </tr>
+        
+        
+    </tr>
+    <tr>
+        <td class="category">6.共生关系</td>
+        <td colspan="2">
+            蚜虫常与蚂蚁形成互利共生关系：蚜虫分泌富含糖分的蜜露，蚂蚁以此为食，作为回报，蚂蚁会保护蚜虫免受天敌侵害，并帮助其转移到更适合的植物部位。<br><br>
+            <b>杀死蚂蚁药物配比：</b><br>
+            配方1（低浓度，适合缓慢毒杀蚁群）： 硼酸 1份 + 糖 10份 + 水 10份<br>
+            配方2（中等浓度，适用于大多数家居蚂蚁）： 硼酸 1份 + 糖 5份 + 水 5份<br>
+            配方3（高浓度，适用于快速杀灭个体蚂蚁）： 硼酸 1份 + 糖 3份 + 水 3份
+        </td>
+    </tr>
+
+    <tr>
+        <th colspan="3">二、对作物的影响</th>
+    </tr>
+    <tr>
+        <td class="category"rowspan="2">1.叶菜类蔬菜</td>
+        <td colspan="2">
+            <ul>
+            <li>品种：白菜、菠菜、莴苣、生菜等</li>
+            <li>影响：蚜虫吸食嫩叶汁液，导致叶片卷曲、皱缩、发黄，严重时整株生长不良甚至枯死。</li>
+            <li>病症：白菜蚜、桃蚜、甘蓝蚜等可传播黄瓜花叶病毒（CMV）、白菜病毒病等。</li>
+            <b>黄瓜花叶病毒（CMV）：</b>全株发病，苗期发病子叶变黄枯萎，幼叶呈现浓绿与淡绿相间花叶状，成株发病新叶呈黄绿相嵌状花叶，病叶小，略皱缩，严重的叶反卷，病株下部叶片逐渐黄枯。
+            </ul>
+        </td>
+    </tr>
+    <tr>
+    <td colspan="2">
+        <div class="enemies">
+            <img src="https://lh3.googleusercontent.com/d/1J8W_ClbbTf5ZJmJLuqljksXmvmXycbm8"onclick="openModal(this)">
+            <img src="https://lh3.googleusercontent.com/d/1k6s42Sd1esQZoIeCf8atfw2effktn4ma"onclick="openModal(this)">
+            <img src="https://lh3.googleusercontent.com/d/1d8CEaAMbA5s8VRi_66N0M7YJbRxIMfzs"onclick="openModal(this)">
+            <img src="https://lh3.googleusercontent.com/d/1mb5QlXHN6_vBIgpY08b_YincIJtST8f5"onclick="openModal(this)">
+            <img src="https://lh3.googleusercontent.com/d/13uO9KD4aD5uf7qIop2RHi9fgG6ws7QFy"onclick="openModal(this)">
+            <img src="https://lh3.googleusercontent.com/d/1fogxWDwqUvF7GHge-bDzpQ5VVR-9437R"onclick="openModal(this)">
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td class="category">2.茄果类蔬菜</td>
+        <td colspan="1">
+            <ul>
+                <li>品种：番茄、辣椒、茄子</li>
+                <li>影响：蚜虫吸食叶片和嫩茎，使植株矮小、叶片扭曲，并影响果实发育。</li>
+                <li>病症：烟草蚜（主要寄生于茄科植物）会传播烟草花叶病毒（TMV），导致果实畸形、产量下降。</li>
+            </ul>
+        </td>
+        <td class="category"><img src="https://lh3.googleusercontent.com/d/1QkwCKuCIy2rO8CCCUAznLxB47JNNA75A"onclick="openModal(this)" alt="七星瓢虫"></td>
+    </tr>
+    
+    <tr>
+        <td class="category">3.瓜类蔬菜</td>
+        <td colspan="2">
+            <ul>
+                <li>品种：黄瓜、西葫芦、南瓜、苦瓜</li>
+                <li>影响：蚜虫吸食嫩叶汁液，导致叶片卷曲、皱缩、发黄，严重时整株生长不良甚至枯死。</li>
+                <li>病症：瓜类蚜虫（如桃蚜、棉蚜）是黄瓜花叶病毒（CMV）、西瓜花叶病毒（WMV）等多种病毒的主要传播者。</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="category">4.十字花科蔬菜</td>
+        <td colspan="2">
+            <ul>
+                <li>品种：甘蓝、花椰菜、萝卜、芝麻菜、上海青、奶白菜、小白菜</li>
+                <li>影响：蚜虫群集在叶片背面、嫩茎处吸食，使叶片皱缩、变色，影响生长和结球。</li>
+                <li>病症：甘蓝蚜可传播萝卜花叶病毒，导致叶片斑驳、畸形，降低市场价值。</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="category">5.豆类/根茎类</td>
+        <td colspan="2">
+            <ul>
+                <li>品种：豆类（豌豆、菜豆、蚕豆）、根茎类（土豆、胡萝卜、洋葱、大蒜）</li>
+                <li>影响：蚜虫吸食嫩叶和茎秆，导致植株生长不良，结荚率下降，块茎畸形。</li>
+                <li>病症：豆类蚜虫传播多种病毒病，如豌豆花叶病毒（PeMV）；马铃薯蚜传播马铃薯Y病毒（PVY），影响产量和品质。</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td class="category" rowspan="2">6.根茎类蔬菜</td>
+        <td colspan="2">
+            <ul>
+                <li>品种：土豆、胡萝卜、洋葱、大蒜</li>
+                <li>影响：蚜虫主要危害叶片和嫩茎，导致植株生长不良，影响地下部分的发育。</li>
+                <li>病症：马铃薯蚜会传播马铃薯Y病毒（PVY），造成块茎畸形、产量下降。</li>
+            </ul>
+        </td>
+    </tr>
+        <tr>
+        <td class="category" ><img src="https://lh3.googleusercontent.com/d/10rXmiMeSaH-TayZHHEgBF9r-UVDEqbcN"onclick="openModal(this)"></td>
+        <td class="category" ><img src="https://lh3.googleusercontent.com/d/14zKivptK42DRHNzdNdJZxO2aAzy4ymH3"onclick="openModal(this)"></td>
+    </tr>
+
+    <tr>
+        <th colspan="3">三、防治</th>
+    </tr>
+    <tr>
+        <td class="category">1.农业防治</td>
+        <td colspan="2">
+            1. 避免密植，适当修剪，保持通风良好。<br>
+            2. 清除蚜虫聚集的老叶、杂草，减少虫源。<br>
+            3. 保护天敌，如瓢虫、草蛉、食蚜蝇、寄生蜂等。<br>
+            4. 对少量蚜虫的植株可用水冲洗叶片。
+        </td>
+    </tr>
+    <tr>
+        <td class="category"rowspan="2">2.药物防治配比</td>
+        <td colspan="2">
+            <ol>
+                <li>苦楝油：1GAL：40ml</li>
+                <li>除虫菊酯：5-10ml/加仑</li>
+                <li>效自硫磺+效自油：1GAL：15ml：60ml——软水</li>
+                <li>效自油：1GAL：50ml-60ml（最高80ml）——软水</li>
+                <li>安利洗洁精：1GAL：15ml</li>
+                <li>洗洁精+小苏打+食用油：1GAL水：15ml：3g：60ml</li>
+                <li> 洗洁精+商路油+水：1:1:100</li>
+            </ol>
+        </td>
+    </tr>
+     <tr>
+    <td colspan="2">
+       <div class="enemies">
+    
+  <figure class="enemy-item">
+    <img src="https://lh3.googleusercontent.com/d/1t7LGmU2ibIRLDe5RXeXxl7LXjSxYS7yb" onclick="openModal(this)">
+    <figcaption>洗洁精</figcaption>
+</figure>
+    <figure>
+        <img src="https://lh3.googleusercontent.com/d/1bP6qppJbqAKmQu-GkRVr5uJEWKTbrGph" onclick="openModal(this)">
+        <figcaption>商路油</figcaption>
+    </figure>
+       <figure>
+        <img src="https://lh3.googleusercontent.com/d/1bLE5FoJQuCV1zFRUaILih1_gq1ndvtLt" onclick="openModal(this)">
+        <figcaption>效自油</figcaption>
+    </figure>
+
+   <figure>
+        <img src="https://lh3.googleusercontent.com/d/1Wo9kU4CBEnI6fl0PVqgagk580zWymoCF" onclick="openModal(this)">
+        <figcaption>苦楝油</figcaption>
+    </figure>
+  <figure>
+        <img src="https://lh3.googleusercontent.com/d/1wGWlJwHDcujm-4Rxv0iw6BW-7LyQr9Vk"onclick="openModal(this)">
+        <figcaption>除虫菊酯</figcaption>
+    </figure>
+         <figure>
+        <img src="https://lh3.googleusercontent.com/d/1hD3N1MNYmP5Bok39R8lMSlg4GojPX48o"onclick="openModal(this)">
+        <figcaption>效自硫磺</figcaption>
+    </figure>
+
+</div>
+    </td>
+    </tr>
+    
+    <tr>
+        <td class="category" rowspan="2">3.注意事项</td>
+        <td colspan="2">
+            <ol>
+                <li><b>蚜虫初期：</b>清洁多余的叶片，保持无杂叶、通风良好，可使用除虫菊酯整体喷洒控制（叶片上下面），平时在使用其他的用来维护控制。</li>
+                <li><b>蚜虫爆发：</b>清洁多余的叶片，保持无杂叶、通风良好，使用成本较低一点的药品喷洒，每棵每片叶子都有喷洒到位。</li>
+                <li><b>打药周期：</b>初期时根据情况5-7天一次，爆发时要连续喷洒3-5天。</li>
+            </ol>
+        </td>
+    </tr>
+
+     </tr>
+        <td class="category"colspan="2" ><img src="https://lh3.googleusercontent.com/d/1KgadUbXflihaFOUGTxum8cFyIe0crej3"onclick="openModal(this)"></td>
+    </tr>
+    
+</table>
+
+</div>
+   
+    
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="fullImage">
+    <div id="captionText"></div>
+</div>
+    
+</body>
+</html>
