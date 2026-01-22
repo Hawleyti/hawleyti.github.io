@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navContainer = document.getElementById("replace_with_navbar");
     if (!navContainer) return;
 
-    fetch("../common/nav.html")
+    fetch("./common/nav.html")
         .then(res => {
             if (!res.ok) throw new Error(res.status);
             return res.text();
@@ -26,7 +26,7 @@ async function handleSearch() {
     if (!query) return;
 
     try {
-        const res = await fetch("../common/data.json");
+        const res = await fetch("common/data.json");
         if (!res.ok) throw new Error(res.status);
 
         const data = await res.json();
@@ -196,3 +196,4 @@ function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.style.display = "none"; // 隐藏模态框
 }
+

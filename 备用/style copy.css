@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center; /* 垂直方向依然居中 */
   align-items: flex-start;
+  padding-left: 15%;
   text-align: left;
   color: white;
 }
@@ -381,6 +382,6 @@ footer {
 }
 
 /* 主标题控制 */
-/* * {
+* {
   outline: 1px solid red;
-} */
+}

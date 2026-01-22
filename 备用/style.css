@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center; /* 垂直方向依然居中 */
   align-items: flex-start;
+  padding-left: 15%;
   text-align: left;
   color: white;
 }
@@ -75,7 +76,7 @@
   border: none;
   border-radius: 4px 0 0 4px;
   font-size: 1rem;
-  background-color: #d0d1d1;
+  
 }
 
 .search-container button {
@@ -214,10 +215,6 @@ footer {
   width: 100%;
   margin-bottom: 20px;
   cursor: pointer;
-  border: 2px solid #8bc34a;   /* 柔和绿 */
-  border-radius: 6px;
-  padding: 3px;
-  background: #f7fbf4;    
 }
 
 
