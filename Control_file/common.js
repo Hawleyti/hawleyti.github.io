@@ -30,10 +30,21 @@ async function handleSearch() {
         if (!res.ok) throw new Error(res.status);
 
         const data = await res.json();
-        const results = data.filter(item =>
-            (item.name || "").toLowerCase().includes(query) ||
-            (item.desc || "").toLowerCase().includes(query)
-        );
+      const results = data.filter(item => {
+    const name = (item.name || "").toLowerCase();
+    const desc = (item.desc || "").toLowerCase();
+
+    // keywords 可能不存在，所以要做保护
+    const keywords = Array.isArray(item.keywords)
+        ? item.keywords.join(" ").toLowerCase()
+        : "";
+
+    return (
+        name.includes(query) ||
+        desc.includes(query) ||
+        keywords.includes(query)
+    );
+});
 
         showSearchModal(query, results);
 
@@ -156,6 +167,7 @@ function showSearchModal(query, results, isError = false) {
         body.innerHTML = `<p>未找到与 “${query}” 相关的内容。</p>`;
         return;
     }
+    
 
     // 渲染搜索结果
     results.forEach(item => {
@@ -196,3 +208,42 @@ function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.style.display = "none"; // 隐藏模态框
 }
+
+
+// 轮播图片控制区
+document.addEventListener('DOMContentLoaded', function() {
+    const slide = document.querySelector('.carousel-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    let currentOffset = 0;
+
+    function updateSlide() {
+        slide.style.transform = `translateX(${currentOffset}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+        // 计算最大可向左滚动的距离
+        const maxScroll = slide.scrollWidth - containerWidth;
+        
+        // 每次点击滚动容器宽度的 70%，保证流畅感
+        currentOffset -= containerWidth * 0.7;
+        
+        if (Math.abs(currentOffset) > maxScroll) {
+            currentOffset = -maxScroll;
+        }
+        updateSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+        
+        currentOffset += containerWidth * 0.7;
+        
+        if (currentOffset > 0) {
+            currentOffset = 0;
+        }
+        updateSlide();
+    });
+});

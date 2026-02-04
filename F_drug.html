@@ -6,11 +6,11 @@
     <title>农业资源库</title>
     <script src="./Control_file/Table of Contents.js"></script>
     <link rel="stylesheet" href="./Control_file/style.css">
-    <script>
+    <!-- <script>
         if (sessionStorage.getItem('authenticated') !== 'true') {
           window.location.href = 'Login.html';
       }
-  </script>
+  </script> -->
   <style>
     #drug {
         border-radius: 4px;
@@ -21,48 +21,48 @@
 </head>
 <body>
   <div id="replace_with_navbar"></div>  <!-- 导航栏 -->
-
-<section class="zhubiaoti">
-    <img src="https://lh3.googleusercontent.com/d/16FgqxGVju8FcvuDx9hXE4oe5OW3NY1dq" alt="背景图">
-    <div class="content-overlay">
-        <!-- <h1>聚焦田间动态，实时监测病虫危害。</h1>
-        <p>通过绿色防控技术，降低农业损失，保障作物优质丰收。</p>
-    </div> -->
+  <div class="location-tag">
+        <span>当前位置</span>
+        <span class="arrow">&gt;</span>
+        <span id="currentPage">药品</span>
+    </div>
+<section class="Image_Carousel">
+      <img src="./images/20260202_drug20.jpg" alt="背景图">
+    </div>
 </section>
+
+
 <div class="container">
     <div class="xiaobiaoti">
-        <h2>药品</h2> 
+        <h2>杀虫剂</h2> 
     </div>
     <hr>
     
     <div class="row">
             <div class="column nature">
                 <div class="contenta">
-                    <a href="./html_file/Aphid.html" >
-                        <img src="https://lh3.googleusercontent.com/d/1ykdBmX23WZq5m2I7qoHIeMuCTKB4yC7x"> </a>
+                    <a href="./html_file/E_ Entrust SC.html" >
+                        <img src="./images/20260202_drug02.jpg"> </a>
                         <div class="text-box">
-                            <h4>药品</h4>
-                            <p>这里描述病虫害的详细信息...</p>
+                            <h4>1、多杀菌素 Entrust SC</h4>
                         </div>
                 </div>
             </div>
             <div class="column nature">
                 <div class="contenta">
-                    <a href="#" >
-                        <img src="https://lh3.googleusercontent.com/d/1V0GKe8aPKqJcQV3x7rlOWNoU8bkBCQXE"> </a>
+                    <a href="./html_file/E_ PyGanic.html" >
+                        <img src="./images/20260202_drug09.png"> </a>
                         <div class="text-box">
-                            <h4>药品</h4>
-                            <p>这里描述病虫害的详细信息...</p>
+                            <h4>2、除虫菊酯</h4>
                         </div>
                 </div>
             </div>
             <div class="column nature">
                 <div class="contenta">
-                    <a href="#" >
-                        <img src="https://lh3.googleusercontent.com/d/1V0GKe8aPKqJcQV3x7rlOWNoU8bkBCQXE"> </a>
+                    <a href="./html_file/E_ BT.html" >
+                        <img src="./images/20260202_drug01.png"> </a>
                         <div class="text-box">
-                            <h4>药品</h4>
-                            <p>这里描述病虫害的详细信息...</p>
+                            <h4>3、BT-A、BT-K、Dipel BT-K</h4>
                         </div>
                 </div>
             </div>

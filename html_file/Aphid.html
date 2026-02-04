@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../Control_file/style.css">
     <style>
         #bingchong{
-        /* background-color: #ffffff; */
-        /* border-radius: 4px; */
         color: rgb(0, 0, 0);
         }
     </style>
@@ -17,23 +15,32 @@
 
 <body>
   <div id="replace_with_navbar"></div>  <!-- 导航栏 -->
-  <section class="fubiaoti">
+  <div class="location-tag">
+        <span>当前位置</span>
+        <span class="arrow">&gt;</span>
+        <span id="currentPage">病虫害</span>
+        <span class="arrow">&gt;</span>
+        <span class="arrow">蚜虫</span>
+    </div>
+  <section class="Image_Carousel">
     <img src="https://lh3.googleusercontent.com/d/1yMugtQFF-3_52sp2esMSLbXIJ3DRjVOg" alt="背景图">
-    <!-- <div class="content-overlay">
-        <h1>蚜虫</h1>
-        <p>蚜虫吸食作物汁液，导致叶片卷曲、黄化、生长受阻，并传播多种植物病毒，严重影响产量和品质。</p>
-    </div> -->
 </section>
 
 <div class="content">
 
 <table>
+     <colgroup>
+          <col style="width: 15%" />  <!-- 第1列 -->
+          <col style="width: 55%" />  <!-- 第2列（文字列） -->
+          <col style="width: 15%" />  <!-- 第3列（图片） -->
+          <col style="width: 15%" />  <!-- 第4列（图片） -->
+        </colgroup>
     <tr>
-        <th colspan="3">一、蚜虫的习性</th>
+        <th colspan="4">一、蚜虫的习性</th>
     </tr>
      <tr>
         <td class="category"rowspan="2">1.食性</td>
-         <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/15WrgvjQ0cDMf_QUPgK82lfrU20PPMQZD"onclick="openModal(this)">
+         <td class="category" colspan="3"><img src="https://lh3.googleusercontent.com/d/15WrgvjQ0cDMf_QUPgK82lfrU20PPMQZD"onclick="openModal(this)">
             <ul>
                 <li>蚜虫主要以植物汁液为食，利用刺吸式口器刺入植物组织，吸取韧皮部的营养液。它们偏好柔嫩的叶片、芽、茎以及花朵，部分种类还会危害果实和根系。</li>
                 <li>刺吸式口器：是取食植物汁液或动物血液的昆虫所具有的既能刺入寄主体内又能吸食寄主体液的口器。</li>
@@ -44,7 +51,7 @@
 
      <tr>
         <td class="category"rowspan="2">2.繁殖方式</td>
-         <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/1GNrTkaT4N9Y17BkjmA5nBUEc6LVwRbB_"onclick="openModal(this)">
+         <td class="category" colspan="3"><img src="https://lh3.googleusercontent.com/d/1GNrTkaT4N9Y17BkjmA5nBUEc6LVwRbB_"onclick="openModal(this)">
             <ul>
                 <li>春夏季:大部分蚜虫以孤雌生殖（无性生殖）方式繁殖，雌蚜可以直接产下小蚜虫，无需交配，且直接是若虫（省略卵阶段），加快繁殖速度。在热带或在温室中，蚜虫可以数年一直进行无性生殖。</li>
             </ul>
@@ -52,13 +59,12 @@
     </tr>
 
     <tr>
-        <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/1v2dvkYeB60HF_1mjCg--1vJSROzdbje4"onclick="openModal(this)">
+        <td class="category" colspan="3"><img src="https://lh3.googleusercontent.com/d/1v2dvkYeB60HF_1mjCg--1vJSROzdbje4"onclick="openModal(this)">
         <ul>
             <li>秋冬季：随着气温降低，蚜虫会进行两性生殖，雄蚜 and 雌蚜交配后产卵，以卵的形式越冬，等待来年春季孵化。</li>
         </ul>
         </td>
     </tr>   
-      <tr> </tr>
     <tr>
         <td class="category" rowspan="2">3.适宜繁殖温度、湿度</td>
          <td>
@@ -71,7 +77,7 @@
                 </ul>
             </ul>
         </td>
-        <td>
+        <td colspan="2">
             <ul>
                 <li>温度：</li>
                 <ul>
@@ -85,7 +91,7 @@
 
 
       <tr>
-        <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/1E8LBbPHkHV_2kDAImOY0NPR10qYI2roG"onclick="openModal(this)">
+        <td class="category" colspan="3"><img src="https://lh3.googleusercontent.com/d/1E8LBbPHkHV_2kDAImOY0NPR10qYI2roG"onclick="openModal(this)">
   <ul>
     <li>繁殖速度：
         <ul>
@@ -102,7 +108,7 @@
 
 <tr>
     <td class="category">4.天敌</td>
-    <td colspan="2">
+    <td colspan="3">
  <div class="enemies">
     <figure>
         <img src="https://lh3.googleusercontent.com/d/1nwrueRUVxtrpDiw8YRwumxNhi5oBzm_R"onclick="openModal(this)">
@@ -162,20 +168,20 @@
 </tr>
     <tr>
         <td class="category"rowspan="2">5.知识扩展</td>
-        <td colspan="2">
+        <td colspan="3">
             <b>椿象：</b>以刺吸式口器吸食寄主植物（尤其是荔枝、龙眼）的汁液，造成花穗萎凋、果皮焦黑、落花落果或生长不佳，严重甚至造成果树枯死。<br>
             *注：有时会把椿象的卵和瓢虫的卵弄混。椿象的看见可以捏死。
         </td>
     <tr>
-        <td class="category" ><img src="https://lh3.googleusercontent.com/d/1_CilLVhHZYGtIlohz4-nbE5YJ1OkjGUO"onclick="openModal(this)"></td>
-        <td class="category" ><img src="https://lh3.googleusercontent.com/d/1tA_WnczcvsDtWHFFumLAJetyIWku39eh"onclick="openModal(this)"></td>
+        <td class="category"><img src="https://lh3.googleusercontent.com/d/1_CilLVhHZYGtIlohz4-nbE5YJ1OkjGUO"onclick="openModal(this)"></td>
+        <td class="category" colspan="2" ><img src="https://lh3.googleusercontent.com/d/1tA_WnczcvsDtWHFFumLAJetyIWku39eh"onclick="openModal(this)"></td>
     </tr>
         
         
     </tr>
     <tr>
         <td class="category">6.共生关系</td>
-        <td colspan="2">
+        <td colspan="3">
             蚜虫常与蚂蚁形成互利共生关系：蚜虫分泌富含糖分的蜜露，蚂蚁以此为食，作为回报，蚂蚁会保护蚜虫免受天敌侵害，并帮助其转移到更适合的植物部位。<br><br>
             <b>杀死蚂蚁药物配比：</b><br>
             配方1（低浓度，适合缓慢毒杀蚁群）： 硼酸 1份 + 糖 10份 + 水 10份<br>
@@ -185,11 +191,11 @@
     </tr>
 
     <tr>
-        <th colspan="3">二、对作物的影响</th>
+        <th colspan="4">二、对作物的影响</th>
     </tr>
     <tr>
         <td class="category"rowspan="2">1.叶菜类蔬菜</td>
-        <td colspan="2">
+        <td colspan="3">
             <ul>
             <li>品种：白菜、菠菜、莴苣、生菜等</li>
             <li>影响：蚜虫吸食嫩叶汁液，导致叶片卷曲、皱缩、发黄，严重时整株生长不良甚至枯死。</li>
@@ -199,7 +205,7 @@
         </td>
     </tr>
     <tr>
-    <td colspan="2">
+    <td colspan="3">
         <div class="enemies">
             <img src="https://lh3.googleusercontent.com/d/1J8W_ClbbTf5ZJmJLuqljksXmvmXycbm8"onclick="openModal(this)">
             <img src="https://lh3.googleusercontent.com/d/1k6s42Sd1esQZoIeCf8atfw2effktn4ma"onclick="openModal(this)">
@@ -212,7 +218,7 @@
     </tr>
     <tr>
         <td class="category">2.茄果类蔬菜</td>
-        <td colspan="1">
+        <td colspan="2">
             <ul>
                 <li>品种：番茄、辣椒、茄子</li>
                 <li>影响：蚜虫吸食叶片和嫩茎，使植株矮小、叶片扭曲，并影响果实发育。</li>
@@ -224,7 +230,7 @@
     
     <tr>
         <td class="category">3.瓜类蔬菜</td>
-        <td colspan="2">
+        <td colspan="3">
             <ul>
                 <li>品种：黄瓜、西葫芦、南瓜、苦瓜</li>
                 <li>影响：蚜虫吸食嫩叶汁液，导致叶片卷曲、皱缩、发黄，严重时整株生长不良甚至枯死。</li>
@@ -234,7 +240,7 @@
     </tr>
     <tr>
         <td class="category">4.十字花科蔬菜</td>
-        <td colspan="2">
+        <td colspan="3">
             <ul>
                 <li>品种：甘蓝、花椰菜、萝卜、芝麻菜、上海青、奶白菜、小白菜</li>
                 <li>影响：蚜虫群集在叶片背面、嫩茎处吸食，使叶片皱缩、变色，影响生长和结球。</li>
@@ -244,7 +250,7 @@
     </tr>
     <tr>
         <td class="category">5.豆类/根茎类</td>
-        <td colspan="2">
+        <td colspan="3">
             <ul>
                 <li>品种：豆类（豌豆、菜豆、蚕豆）、根茎类（土豆、胡萝卜、洋葱、大蒜）</li>
                 <li>影响：蚜虫吸食嫩叶和茎秆，导致植株生长不良，结荚率下降，块茎畸形。</li>
@@ -254,7 +260,7 @@
     </tr>
     <tr>
         <td class="category" rowspan="2">6.根茎类蔬菜</td>
-        <td colspan="2">
+        <td colspan="3">
             <ul>
                 <li>品种：土豆、胡萝卜、洋葱、大蒜</li>
                 <li>影响：蚜虫主要危害叶片和嫩茎，导致植株生长不良，影响地下部分的发育。</li>
@@ -264,15 +270,15 @@
     </tr>
         <tr>
         <td class="category" ><img src="https://lh3.googleusercontent.com/d/10rXmiMeSaH-TayZHHEgBF9r-UVDEqbcN"onclick="openModal(this)"></td>
-        <td class="category" ><img src="https://lh3.googleusercontent.com/d/14zKivptK42DRHNzdNdJZxO2aAzy4ymH3"onclick="openModal(this)"></td>
+        <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/14zKivptK42DRHNzdNdJZxO2aAzy4ymH3"onclick="openModal(this)"></td>
     </tr>
 
     <tr>
-        <th colspan="3">三、防治</th>
+        <th colspan="4">三、防治</th>
     </tr>
     <tr>
         <td class="category">1.农业防治</td>
-        <td colspan="2">
+        <td colspan="3">
             1. 避免密植，适当修剪，保持通风良好。<br>
             2. 清除蚜虫聚集的老叶、杂草，减少虫源。<br>
             3. 保护天敌，如瓢虫、草蛉、食蚜蝇、寄生蜂等。<br>
@@ -281,7 +287,7 @@
     </tr>
     <tr>
         <td class="category"rowspan="2">2.药物防治配比</td>
-        <td colspan="2">
+        <td colspan="3">
             <ol>
                 <li>苦楝油：1GAL：40ml</li>
                 <li>除虫菊酯：5-10ml/加仑</li>
@@ -294,7 +300,7 @@
         </td>
     </tr>
      <tr>
-    <td colspan="2">
+    <td colspan="3">
        <div class="enemies">
     
   <figure class="enemy-item">
@@ -329,7 +335,7 @@
     
     <tr>
         <td class="category" rowspan="2">3.注意事项</td>
-        <td colspan="2">
+        <td colspan="3">
             <ol>
                 <li><b>蚜虫初期：</b>清洁多余的叶片，保持无杂叶、通风良好，可使用除虫菊酯整体喷洒控制（叶片上下面），平时在使用其他的用来维护控制。</li>
                 <li><b>蚜虫爆发：</b>清洁多余的叶片，保持无杂叶、通风良好，使用成本较低一点的药品喷洒，每棵每片叶子都有喷洒到位。</li>
@@ -339,7 +345,7 @@
     </tr>
 
      </tr>
-        <td class="category"colspan="2" ><img src="https://lh3.googleusercontent.com/d/1KgadUbXflihaFOUGTxum8cFyIe0crej3"onclick="openModal(this)"></td>
+        <td class="category"colspan="3" ><img src="https://lh3.googleusercontent.com/d/1KgadUbXflihaFOUGTxum8cFyIe0crej3"onclick="openModal(this)"></td>
     </tr>
     
 </table>
@@ -352,6 +358,10 @@
     <img class="modal-content" id="fullImage">
     <div id="captionText"></div>
 </div>
+
+  <footer>
+      <p>&copy; 蚜虫</p>
+    </footer>
     
 </body>
 </html>

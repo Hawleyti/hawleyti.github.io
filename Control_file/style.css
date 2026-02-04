@@ -153,6 +153,7 @@ footer {
   border-collapse: collapse;
   margin-bottom: 20px;
   margin-top: 20px;
+  table-layout: fixed; 
 }
 .content th {
   background-color: #c0d4c1;
@@ -191,36 +192,36 @@ footer {
   margin: 5px 0;
 }
 .content .category {
-  width: 5px;
+  width: auto;
 }
 .content .category img {
-  max-width: 100%;
   float: left;
   margin-right: 40px;
-  max-height: 200px;
-  min-width: 200px;
   margin-top: 10px;
-  cursor: pointer; /* 鼠标悬浮时变成小手 */
-  transition: opacity 0.2s; /* 可选：增加一个透明度过渡，让交互感更强 */
+  cursor: pointer;
+
+  width: 200px;
+  height: auto;
+  max-width: 100%;
 }
 
+
+
 .img-float-right {
-  float: right;          /* 整个图片列靠右浮动 */
+  float: right; /* 整个图片列靠右浮动 */
   margin: 20px 10px;
-  width: 100px;          /* 给一个固定宽度，防止乱 */
+  width: 100px; /* 给一个固定宽度，防止乱 */
 }
 
 .img-float-right img {
   width: 100%;
   margin-bottom: 20px;
   cursor: pointer;
-  border: 2px solid #8bc34a;   /* 柔和绿 */
+  border: 2px solid #8bc34a; /* 柔和绿 */
   border-radius: 6px;
   padding: 3px;
-  background: #f7fbf4;    
+  background: #f7fbf4;
 }
-
-
 
 /* 可选：悬浮时稍微变亮或变暗，给用户更明确的反馈 */
 .content img:hover {
@@ -319,8 +320,8 @@ footer {
 
 /* 外层容器居中 */
 .container {
-  max-width: 1200px;
-  width: 100%;
+  /* max-width: 1200px; */
+  width: 70%;
   padding: 0 15px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -337,7 +338,7 @@ footer {
 .column {
   flex: 0 0 25%;
   max-width: 25%;
-  padding: 15px; /* 间距保持较小，让图片更大 */
+  padding: 15px; 
   box-sizing: border-box;
 }
 
@@ -353,9 +354,11 @@ footer {
 .contenta a img {
   width: 100%;
   height: 220px;
-  object-fit: cover; /* 保证不变形 */
-  display: block; /* 消除图片底部的微小缝隙 */
-  border-radius: 4px 4px 0 0; /* 仅上方圆角，下方直角对接文字块 */
+  /* 关键修改：图片会缩放到完整显示，多余空间留白 */
+  object-fit: contain; 
+  background-color: #f0f0f0; /* 可选：增加背景色填充留白区域 */
+  display: block;
+  border-radius: 4px 4px 0 0;
 }
 
 /* 3. 新增：文字共用的背景色块 */
@@ -380,7 +383,123 @@ footer {
   line-height: 1.5;
 }
 
-/* 主标题控制 */
-/* * {
-  outline: 1px solid red;
-} */
+/* 图片轮播外层容器 ⬇ */
+.Image_Carousel {
+    position: relative;
+    width: 69%;
+    margin: 35px auto 30px; /* 避开固定导航栏 */
+    background-color: #f5f5f5; /* 确保背景色统一 */
+    overflow: hidden;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* 强制固定高度 */
+}
+
+/* ⭐ 左右边缘渐淡（核心逻辑） */
+.carousel-container::before, 
+.carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10%; /* 渐变宽度，可根据喜好调整 */
+    height: 100%;
+    z-index: 5;
+    pointer-events: none; /* 让鼠标可以穿透遮罩点击图片 */
+}
+
+/* 左侧从背景色渐变到透明 */
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, rgba(245, 245, 245, 0));
+}
+
+/* 右侧从透明渐变到背景色 */
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, rgba(245, 245, 245, 0));
+}
+
+/* 图片滚动长廊 */
+.carousel-slide {
+    display: flex; 
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.carousel-slide img {
+    height: 400px;
+    width: auto;
+    flex-shrink: 0;
+    margin-right: 20px;
+    border-radius: 8px;
+    
+    /* ⭐ 关键：设置鼠标悬浮为手型 */
+    cursor: pointer; 
+    
+    /* 设置平滑过渡效果（时间为0.3秒） */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ⭐ 鼠标悬浮（Hover）时的效果 */
+.carousel-slide img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10; 
+}
+
+/* 按钮样式：确保在遮罩之上 */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(46, 125, 50, 0.8);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover { background-color: #1b5e20; }
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* 内容叠加层：稍微压低，不遮挡图片主体 */
+.content-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    pointer-events: none;
+}    /* 药品图片效果，轮播外层容器 ⬆ */
+
+/* 当前位置标签 */
+.location-tag{
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 15px 0;
+  border-radius: 12px;
+  /* background: rgba(251, 255, 253, 0.12); */
+  /* border: 1px solid rgba(34, 197, 94, 0.35); */
+  /* color: #ffffff; */
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  top: 40px;
+  left: 14%;
+}
+.location-tag span{
+  margin-left: 6px;
+  color: #0f172a;
+}

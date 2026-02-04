@@ -6,11 +6,11 @@
     <title>农业资源库</title>
     <script src="./Control_file/Table of Contents.js"></script>
     <link rel="stylesheet" href="./Control_file/style.css">
-    <script>
+    <!-- <script>
         if (sessionStorage.getItem('authenticated') !== 'true') {
           window.location.href = 'Login.html';
       }
-  </script>
+  </script> -->
   <style>
     #vegetable {
         border-radius: 4px;
@@ -21,8 +21,13 @@
 </head>
 <body>
   <div id="replace_with_navbar"></div> 
+      <div class="location-tag">
+        <span>当前位置</span>
+        <span class="arrow">&gt;</span>
+        <span id="currentPage">蔬菜</span>
+    </div>
 
-<section class="zhubiaoti">
+<section class="Image_Carousel">
     <img src="https://lh3.googleusercontent.com/d/1Z3fi_i66l9tgO-dnRnLbYnlOJ2Zbclk9" alt="背景图">
     <!-- <div class="content-overlay">
         <h1>新鲜采摘，保留自然本味。</h1>
