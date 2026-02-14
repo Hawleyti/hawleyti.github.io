@@ -179,7 +179,6 @@ function showSearchModal(query, results, isError = false) {
                 <img src="${item.img}" alt="${item.name}">
                 <div class="card-body">
                     <h3>${item.name}</h3>
-                    <p>${item.desc}</p>
                 </div>
             </div>
         `;
@@ -246,4 +245,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         updateSlide();
     });
+});
+
+// 内容侧边栏控制区
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("sidebar");
+    const btn = document.getElementById("toggleBtn");
+
+    function openSidebar() {
+        sidebar.classList.add("show");
+        btn.textContent = "✕";
+    }
+
+    function closeSidebar() {
+        sidebar.classList.remove("show");
+        btn.textContent = "☰";
+    }
+
+    btn.onclick = (e) => {
+        e.stopPropagation();
+        sidebar.classList.contains("show") ? closeSidebar() : openSidebar();
+    };
+
+    document.addEventListener("click", () => {
+        if (sidebar.classList.contains("show")) closeSidebar();
+    });
+
+    sidebar.onclick = e => e.stopPropagation();
 });

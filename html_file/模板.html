@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>农业资源库</title>
+    <script src="../Control_file/common.js"></script>
+    <link rel="stylesheet" href="../Control_file/style.css" />
+    <style>
+      #drug {
+        color: rgb(0, 0, 0);
+      }
+      .content .category {
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="replace_with_navbar"></div>
+    <!-- 导航栏 -->
+    <div class="location-tag">
+      <span>当前位置</span>
+      <span class="arrow">&gt;</span>
+      <span id="currentPage">药品</span>
+      <span class="arrow">&gt;</span>
+      <span class="arrow">效自油</span>
+    </div>
+
+    <div class="content">
+      <table>
+        <colgroup>
+          <col style="width: 15%" />
+          <!-- 第1列 -->
+          <col style="width: 25%" />
+          <!-- 第2列（文字列） -->
+          <col style="width: 25%" />
+          <!-- 第3列（图片） -->
+          <col style="width: 35%" />
+          <!-- 第4列（图片） -->
+        </colgroup>
+
+        <tr>
+          <th colspan="4"></th>
+        </tr>
+
+  </table>
+</div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="fullImage" />
+      <div id="captionText"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 效自油</p>
+    </footer>
+  </body>
+</html>

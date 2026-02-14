@@ -130,6 +130,10 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+  position: relative;
+  z-index: 10;
+
+  
 }
 /* 整理页面内容控制区域 ⬇*/
 
@@ -141,7 +145,7 @@ footer {
   width: 70%;
   /* max-width: 1200px;  */
 
-  margin: 0 auto;
+ margin: 100px auto 0 auto;
   padding: 0 16px; /* ⭐ 防止贴边，小屏更友好 */
   box-sizing: border-box;
 
@@ -191,15 +195,11 @@ footer {
   display: block;
   margin: 5px 0;
 }
-.content .category {
-  width: auto;
-}
 .content .category img {
   float: left;
   margin-right: 40px;
   margin-top: 10px;
   cursor: pointer;
-
   width: 200px;
   height: auto;
   max-width: 100%;
@@ -240,6 +240,29 @@ footer {
   height: auto;
   max-height: none;
 }
+@media (max-width: 1024px) {
+  .enemies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 屏幕 ≤ 768px：2列 */
+@media (max-width: 768px) {
+  .enemies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 屏幕 ≤ 480px：1列 */
+@media (max-width: 480px) {
+  .enemies {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 
 /* 每一个格子 */
 .enemy-item {
@@ -330,58 +353,62 @@ footer {
 .row {
   display: flex;
   flex-wrap: wrap;
-  /* 这里的负边距必须和下面的 column padding 一致，比如都是 4px */
   margin: 0;
 }
 
-/* 容器保持之前的 4 列排版 */
+/* 四列 */
 .column {
   flex: 0 0 25%;
   max-width: 25%;
-  padding: 15px; 
+  padding: 15px;
   box-sizing: border-box;
 }
 
-/* 关键修改：让 a 标签变成块级元素，否则它会塌陷导致图片变形 */
+/* 卡片整体 */
+.contenta {
+  display: flex;
+  flex-direction: column;
+}
+
+/* a 包裹图片，防止塌陷 */
 .contenta > a {
   display: block;
   width: 100%;
-  line-height: 0; /* 消除 a 标签底部的微小缝隙 */
-  overflow: hidden; /* 配合圆角使用 */
+  line-height: 0;
+  overflow: hidden;
 }
 
-/* 图片样式 */
+/* 图片 */
 .contenta a img {
   width: 100%;
   height: 220px;
-  /* 关键修改：图片会缩放到完整显示，多余空间留白 */
-  object-fit: contain; 
-  background-color: #f0f0f0; /* 可选：增加背景色填充留白区域 */
+  object-fit: contain;     /* 不变形、不裁切 contain*/
+  background-color: #f0f0f0;
   display: block;
-  border-radius: 4px 4px 0 0;
+  border-radius: 6px 6px 0 0;
 }
 
-/* 3. 新增：文字共用的背景色块 */
+/* 文字区，自动与图片同宽 */
 .text-box {
-  background-color: #beddce; /* 这里设置你想要的共用背景色 */
-  padding: 10px; /* 文字离边框的距离 */
-  flex-grow: 1; /* 确保即使文字少，背景也能撑满高度 */
-  border-radius: 0 0 4px 4px; /* 仅下方圆角，上方直角对接图片 */
+  width: 100%;             /* 明确声明，防止未来改动出问题 */
+  background-color: #beddce;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 0 0 6px 6px;
 }
 
-/* 内部文字间距微调 */
 .text-box h4 {
-  margin: 0 0 8px 0;
+  margin: 0;
   font-size: 18px;
   color: #333;
 }
 
 .text-box p {
-  margin: 0;
-  color: #666;
+  margin-top: 6px;
   font-size: 14px;
-  line-height: 1.5;
+  color: #666;
 }
+
 
 /* 图片轮播外层容器 ⬇ */
 .Image_Carousel {
@@ -410,16 +437,16 @@ footer {
 }
 
 /* 左侧从背景色渐变到透明 */
-.carousel-container::before {
+/* .carousel-container::before {
     left: 0;
     background: linear-gradient(to right, #ffffff, rgba(245, 245, 245, 0));
-}
+} */
 
 /* 右侧从透明渐变到背景色 */
-.carousel-container::after {
+/* .carousel-container::after {
     right: 0;
     background: linear-gradient(to left, #ffffff, rgba(245, 245, 245, 0));
-}
+} */
 
 /* 图片滚动长廊 */
 .carousel-slide {
@@ -502,4 +529,122 @@ footer {
 .location-tag span{
   margin-left: 6px;
   color: #0f172a;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ===== 侧边栏 ===== */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #e6e6e6;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 20px;
+    left: 0;
+    padding-top: 60px;
+    transform: translateX(-240px);
+    transition: transform 0.4s cubic-bezier(.25,.8,.25,1);
+    z-index: 10; /* 调高了 z-index，确保不被遮挡 */
+    overflow-y: auto; /* 如果标签太多，允许内部滚动 */
+}
+
+/* 展开状态 */
+.sidebar.show {
+    transform: translateX(0);
+}
+
+/* 通用链接样式 (一级菜单) */
+.sidebar a {
+    display: block;
+    padding: 14px 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 15px; /* 稍微调大一点，更有层次感 */
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    /* background: #374151; */
+    color: #009b27;
+}
+
+/* ===== 新增：二级菜单容器 ===== */
+.sub-menu {
+    /* background: #dfdddd;  */
+    display: block;      /* 默认显示，如果想做成点击展开则需改此项 */
+}
+
+/* ===== 新增：二级菜单链接样式 ===== */
+.sub-menu a {
+    padding: 10px 20px 10px 45px !important; /* 强制左缩进，拉开距离 */
+    font-size: 13px !important;              /* 字号稍微调小 */
+    color: #000000 !important;               /* 颜色调淡 */
+}
+
+.sub-menu a:hover {
+    color: #009b27 !important;
+    /* background: #6e4848; */
+}
+
+/* ===== 折叠按钮 (带随动动画) ===== */
+.toggle-btn {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+     background: #bdbdbd;
+    color: rgb(53, 53, 53);
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    line-height: 42px;
+    cursor: pointer;
+    font-size: 25px;
+    z-index: 11;
+    transition: left 0.4s cubic-bezier(.25,.8,.25,1); /* 让按钮跟着一起滑 */
+}
+
+/* 按钮在侧边栏展开时的位置 */
+.sidebar.show ~ .toggle-btn {
+    left: 240px;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 9;
+}
+
+#overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.main-content {
+    transition: margin-left 0.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.main-content.shift {
+    margin-left: 240px;
+}
+:target {
+    scroll-margin-top: 80px;
+}
+
+
+footer {
+    position: relative;
+    z-index: 2000;
 }

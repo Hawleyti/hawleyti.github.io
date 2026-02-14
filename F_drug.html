@@ -1,94 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>农业资源库</title>
     <script src="./Control_file/Table of Contents.js"></script>
-    <link rel="stylesheet" href="./Control_file/style.css">
+    <link rel="stylesheet" href="./Control_file/style.css" />
     <!-- <script>
         if (sessionStorage.getItem('authenticated') !== 'true') {
           window.location.href = 'Login.html';
       }
   </script> -->
-  <style>
-    #drug {
+    <style>
+      #drug {
         border-radius: 4px;
         color: rgb(0, 0, 0);
+      
+      }
+       h2{
+          margin-top: 100px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="replace_with_navbar"></div>
+    <!-- 导航栏 -->
+    <div class="location-tag">
+      <span>当前位置</span>
+      <span class="arrow">&gt;</span>
+      <span id="currentPage">药品</span>
+    </div>
+    <section class="Image_Carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img src="./images/20260202_drug20.jpg" alt="农业图片1" />
+          <img src="./images/20260202_drug21.jpg" alt="农业图片1" />
+          <img src="./images/20260202_drug22.jpg" alt="农业图片1" />
+        </div>
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <button class="carousel-btn next-btn">&#10095;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="xiaobiaoti">
+        <h2>杀虫剂</h2>
+      </div>
+      <hr />
+
+      <div class="row">
+        <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_ Entrust SC.html">
+              <img src="./images/20260202_drug02.jpg" />
+            </a>
+            <div class="text-box">
+              <h4>1、多杀菌素 Entrust SC</h4>
+            </div>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_ PyGanic.html">
+              <img src="./images/20260202_drug09.png" />
+            </a>
+            <div class="text-box">
+              <h4>2、除虫菊酯</h4>
+            </div>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_ BT.html">
+              <img src="./images/20260202_drug01.png" />
+            </a>
+            <div class="text-box">
+              <h4>3、BT-A、BT-K、Dipel BT-K</h4>
+            </div>
+          </div>
+        </div>
+        <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_ Surround WP.html">
+              <img src="./images/20260202_drug03.png" />
+            </a>
+            <div class="text-box">
+              <h4>4、高岭土</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>杀菌剂</h2>
+      <hr />
+      <div class="row">
+        <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_ Cueva_Fungicide_Concentrate.html">
+              <img src="./images/20260202_drug05.png" />
+            </a>
+            <div class="text-box">
+              <h4>1、库伊瓦辛酸铜杀菌剂</h4>
+            </div>
+          </div>
+        </div>
+         <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_Kocide 3000-O.html">
+              <img src="./images/20260202_drug13.png" />
+            </a>
+            <div class="text-box">
+              <h4>2、蔻塞得铜杀菌剂 Kocide</h4>
+            </div>
+          </div>
+        </div>
+         <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_xzy.html">
+              <img src="./images/20260202_drug04.jpg" />
+            </a>
+            <div class="text-box">
+              <h4>3、效自油</h4>
+            </div>
+          </div>
+        </div>
+         <div class="column nature">
+          <div class="contenta">
+            <a href="./html_file/E_XZLH.html">
+              <img src="./images/Image_fx (5).png" />
+            </a>
+            <div class="text-box">
+              <h4>4、效自硫磺</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>药品学习录屏</h2>
+      <hr />
+      <div class="row">
+
+      <div class="column nature">
+          <div class="contenta">
+            <iframe
+              src="https://drive.google.com/file/d/1c8SZ4ruI5yj6oOV5CGbnGZT260qOpe--/preview?">
+            </iframe>
+            <div class="text-box">
+              <a href="https://drive.google.com/file/d/1c8SZ4ruI5yj6oOV5CGbnGZT260qOpe--/view?usp=sharing"
+                target="_blank"
+                class="title-link">
+                <h4>药品学习_效自油\效自硫磺</h4>
+              </a>
+            </div>
+          </div>
+      </div>
+
+      <div class="column nature">
+          <div class="contenta">
+            <iframe
+              src="https://drive.google.com/file/d/1Sw0O2Yzd4EZBbzXvtGbsTWkCnwc0GFIX/preview?">
+            </iframe>
+            <div class="text-box">
+              <a href="https://drive.google.com/file/d/1Sw0O2Yzd4EZBbzXvtGbsTWkCnwc0GFIX/view?usp=sharing"
+                target="_blank"
+                class="title-link">
+                <h4>药品学习_BT/铜制剂</h4>
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="column nature">
+          <div class="contenta">
+            <iframe
+              src="https://drive.google.com/file/d/1psftGmjuTVlbyqq-FqaedYQTgqdkrIVx/preview?">
+            </iframe>
+            <div class="text-box">
+              <a href="https://drive.google.com/file/d/1psftGmjuTVlbyqq-FqaedYQTgqdkrIVx/view?usp=sharing"
+                target="_blank"
+                class="title-link">
+                <h4>马铃薯叶蝉学习</h4>
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="column nature">
+          <div class="contenta">
+            <iframe
+              src="https://drive.google.com/file/d/1ECOs1u7MHI-v5VJ5YZ2VCS68xt_yY-v_/preview?">
+            </iframe>
+            <div class="text-box">
+              <a href="https://drive.google.com/file/d/1ECOs1u7MHI-v5VJ5YZ2VCS68xt_yY-v_/view?usp=sharing"
+                target="_blank"
+                class="title-link">
+                <h4>药品学习1</h4>
+              </a>
+            </div>
+          </div>
+      </div>
+
         
-    }
-  </style>
-</head>
-<body>
-  <div id="replace_with_navbar"></div>  <!-- 导航栏 -->
-  <div class="location-tag">
-        <span>当前位置</span>
-        <span class="arrow">&gt;</span>
-        <span id="currentPage">药品</span>
-    </div>
-<section class="Image_Carousel">
-      <img src="./images/20260202_drug20.jpg" alt="背景图">
-    </div>
-</section>
+      </div>
 
 
-<div class="container">
-    <div class="xiaobiaoti">
-        <h2>杀虫剂</h2> 
     </div>
-    <hr>
-    
-    <div class="row">
-            <div class="column nature">
-                <div class="contenta">
-                    <a href="./html_file/E_ Entrust SC.html" >
-                        <img src="./images/20260202_drug02.jpg"> </a>
-                        <div class="text-box">
-                            <h4>1、多杀菌素 Entrust SC</h4>
-                        </div>
-                </div>
-            </div>
-            <div class="column nature">
-                <div class="contenta">
-                    <a href="./html_file/E_ PyGanic.html" >
-                        <img src="./images/20260202_drug09.png"> </a>
-                        <div class="text-box">
-                            <h4>2、除虫菊酯</h4>
-                        </div>
-                </div>
-            </div>
-            <div class="column nature">
-                <div class="contenta">
-                    <a href="./html_file/E_ BT.html" >
-                        <img src="./images/20260202_drug01.png"> </a>
-                        <div class="text-box">
-                            <h4>3、BT-A、BT-K、Dipel BT-K</h4>
-                        </div>
-                </div>
-            </div>
-            <div class="column nature">
-                <div class="contenta">
-                    <a href="#" >
-                        <img src="https://lh3.googleusercontent.com/d/1V0GKe8aPKqJcQV3x7rlOWNoU8bkBCQXE"> </a>
-                        <div class="text-box">
-                            <h4>药品</h4>
-                            <p>这里描述病虫害的详细信息...</p>
-                        </div>
-                </div>
-            </div>
-            <div class="column nature">
-                <div class="contenta">
-                    <a href="#" >
-                        <img src="https://lh3.googleusercontent.com/d/1V0GKe8aPKqJcQV3x7rlOWNoU8bkBCQXE"> </a>
-                        <div class="text-box">
-                            <h4>药品</h4>
-                            <p>这里描述病虫害的详细信息...</p>
-                        </div>
-                </div>
-            </div>
-
-        
-    </div>
-    
-</body>
+  </body>
 </html>

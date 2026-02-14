@@ -178,7 +178,6 @@ function showSearchModal(query, results, isError = false) {
                 <img src="${item.img}" alt="${item.name}">
                 <div class="card-body">
                     <h3>${item.name}</h3>
-                    <p>${item.desc}</p>
                 </div>
             </div>
         `;
@@ -244,4 +243,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         updateSlide();
     });
+});
+
+// 左侧边栏控制区
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const btn = document.getElementById("toggleBtn");
+    const content = document.getElementById("mainContent");
+
+    // 检查核心元素是否存在
+    if (!sidebar || !btn) return;
+
+    function toggleSidebar() {
+        sidebar.classList.toggle("show");
+        if (overlay) overlay.classList.toggle("show");
+        if (content) content.classList.toggle("shift");
+
+        // 保存状态到本地
+        localStorage.setItem("sidebarStatus", sidebar.classList.contains("show"));
+    }
+
+    btn.onclick = toggleSidebar;
+    if (overlay) overlay.onclick = toggleSidebar;
+
+    // ESC 键关闭逻辑
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && sidebar.classList.contains("show")) {
+            toggleSidebar();
+        }
+    });
+
+    // 页面刷新后恢复之前的状态
+    if (localStorage.getItem("sidebarStatus") === "true") {
+        sidebar.classList.add("show");
+        if (overlay) overlay.classList.add("show");
+        if (content) content.classList.add("shift");
+    }
 });

@@ -7,7 +7,7 @@
     <script src="../Control_file/common.js"></script>
     <link rel="stylesheet" href="../Control_file/style.css" />
     <style>
-      #vegetable {
+      #field{
         /* background-color: #ffffff; */
         /* border-radius: 4px; */
         color: rgb(0, 0, 0);
@@ -25,7 +25,28 @@
         <span class="arrow">洋葱</span>
     </div>
 
-    <section class="Image_Carousel">
+
+
+    <!-- 左侧导航栏 -->
+   <div class="sidebar" id="sidebar">
+    <a href="#a1">一、基本信息</a>
+    <a href="#a2">二、移栽要点</a>
+    <a href="#a3">三、田间管理</a>
+    <div class="sub-menu">
+        <a href="#a3-1">发叶期</a>
+        <a href="#a3-2">鳞茎膨大期</a>
+    </div>
+    <a href="#a4">4、收获期</a>
+    <div class="sub-menu">
+        <a href="#a4-1">病毒</a>
+    </div>
+</div>
+
+<div class="toggle-btn" id="toggleBtn">☰</div>
+
+    
+<div class="main-content" id="mainContent">
+      <section class="Image_Carousel">
       <img
         src="https://lh3.googleusercontent.com/d/18OSgh15TStMjI-35gyEuzNGkEOxxsf4v"
         alt="背景图"
@@ -46,7 +67,7 @@
       
         <thead>
           <tr>
-            <th colspan="4" class="section-title">一、基本信息</th>
+            <th id="a1" colspan="4" class="section-title">一、基本信息</th>
           </tr>
         </thead>
 
@@ -120,7 +141,7 @@
       <table>
         <thead>
           <tr>
-            <th colspan="4" class="section-title">二、移栽要点</th>
+            <th id="a2" colspan="4" class="section-title">二、移栽要点</th>
           </tr>
         </thead>
         <tbody>
@@ -162,7 +183,7 @@
       <table>
         <thead>
           <tr>
-             <th colspan="4" class="section-title">三、田间管理</th>
+             <th id="a3" colspan="4" class="section-title">三、田间管理</th>
           </tr>
         </thead>
         <tbody>
@@ -271,7 +292,7 @@
          
 
           <tr>
-              <th colspan="4">2、发叶期（缓苗后一直到长出8-9片真叶，一般是移栽后40-60天之内（4月下旬—6月上旬）</th>
+              <th id="a3-1" colspan="4">2、发叶期（缓苗后一直到长出8-9片真叶，一般是移栽后40-60天之内（4月下旬—6月上旬）</th>
            </tr>
           <tr>
           <tr>
@@ -363,7 +384,7 @@
 
 
         <tr>
-            <td rowspan="5">4.虫害：蓟马</td>
+            <td rowspan="3">4.虫害：蓟马</td>
             <td colspan="3">
               <ul>
                 <li>危害：
@@ -397,7 +418,7 @@
               </td>
          </tr>
         <tr>
-            <td colspan="2" rowspan="2">
+            <td colspan="2" >
               <ul>
                 <li>防治方法（参考资料）：
                  <ol>
@@ -412,25 +433,21 @@
                 </li>
               </ul>
               </td>
-               <td class="category" ><img src="https://lh3.googleusercontent.com/d/1L_lFQFgV6S-4t4lu3TYTMAcJ2bMz4C1G"onclick="openModal(this)"></td>  
-              
-         </tr>
-        <tr>
+              <td class="category" ><img src="https://lh3.googleusercontent.com/d/1L_lFQFgV6S-4t4lu3TYTMAcJ2bMz4C1G"onclick="openModal(this)"></td>  
             <td class="category" ><img src="https://lh3.googleusercontent.com/d/1f5CvcQ_c4PnADO6aRNjd9enlixZCEMMq"onclick="openModal(this)"></td>  
-              
          </tr>
 
         <tr>
-            <th colspan="4">3、鳞茎膨大期（叶鞘基部开始增厚一直到磷茎成熟，即移栽60-120天以后——6月中旬-8月初）</th>
+            <th id="a3-2" colspan="4">3、鳞茎膨大期（叶鞘基部开始增厚一直到磷茎成熟，即移栽60-120天以后——6月中旬-8月初）</th>
         </tr>
          <tr>
           <td colspan="4">洋葱的鳞茎膨大期是洋葱生长过程中的一个重要阶段，通常出现在洋葱的生长期末期。在这一阶段，洋葱的鳞茎（所称的“洋葱球茎”）开始快速膨大，储存养分，为植物的成熟和收获做准备。</td>
         </tr>
         <tr>
-          <td colspan="1">鳞茎膨大期的特点</td>
-          <td colspan="1">
+          <td colspan="1">鳞茎膨大期的特点:</td>
+          <td class="category" colspan="2"><img src="https://lh3.googleusercontent.com/d/1hiPuj2xq8xOt34CVASCTN8nn6jOEmkT6"onclick="openModal(this)">
             <ul >
-              <li>鳞茎快速膨大：
+              <li>鳞茎快速膨大,
                 <ul>
               <li>这个阶段洋葱的鳞茎逐渐从幼小的状态转变为较大的球形结构，体积迅速增大。</li>
               <li>主要是因为植物开始将光合作用产生的糖分和其他养分储存在鳞茎中，为后续的繁殖或休眠期做准备。</li>
@@ -439,7 +456,6 @@
               </li>
             </ul>
           </td>
-           <td class="category" ><img src="https://lh3.googleusercontent.com/d/1hiPuj2xq8xOt34CVASCTN8nn6jOEmkT6"onclick="openModal(this)"></td>   
             <td class="category" ><img src="https://lh3.googleusercontent.com/d/198dpRuWWACFm9N6a6lV5FDtZIcgZ3GSc"onclick="openModal(this)"></td>   
         </tr>
 
@@ -605,7 +621,7 @@
      <table>
         <thead>
           <tr>
-            <th colspan="4" class="section-title">收获期</th>
+            <th id="a4" colspan="4" class="section-title">四、收获期</th>
           </tr>
         </thead>
         <tr>
@@ -675,7 +691,7 @@
         </td>
       </tr>
       <tr>
-        <th colspan="4">病毒
+        <th id="a4-1" colspan="4">病毒
           <ul>
             <li>灰霉性颈腐病</li>
           </ul>
@@ -749,6 +765,7 @@
 
      
     </div>
+  </div>
 
     <div id="imageModal" class="modal" onclick="closeModal()">
       <span class="close-btn">&times;</span>

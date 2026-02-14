@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>农业资源库</title>
+    <script src="../Control_file/common.js"></script>
+    <link rel="stylesheet" href="../Control_file/style.css" />
+    <style>
+      #drug {
+        color: rgb(0, 0, 0);
+      }
+      .content .category {
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="replace_with_navbar"></div>
+    <!-- 导航栏 -->
+    <div class="location-tag">
+      <span>当前位置</span>
+      <span class="arrow">&gt;</span>
+      <span id="currentPage">药品</span>
+      <span class="arrow">&gt;</span>
+      <span class="arrow">蔻塞得铜杀菌剂</span>
+    </div>
+
+    <div class="content">
+      <table>
+        <colgroup>
+          <col style="width: 15%" />
+          <!-- 第1列 -->
+          <col style="width: 25%" />
+          <!-- 第2列（文字列） -->
+          <col style="width: 25%" />
+          <!-- 第3列（图片） -->
+          <col style="width: 35%" />
+          <!-- 第4列（图片） -->
+        </colgroup>
+        <tr>
+          <th colspan="4">蔻塞得铜杀菌剂 Kocide 3000-O</th>
+        </tr>
+        <tr>
+          <td class="category" colspan="4">
+            <img
+              src="../images/20260202_drug13.png"
+              onclick="openModal(this)"
+            />
+            <ol>
+              <li>广谱型铜杀菌剂</li>
+              <li>主要成分：46.1%的氢氧化铜，金属铜当量 30%</li>
+              <li>
+                打药用水PH
+                不能低于6.5，否则有可能会引起植毒性。（雨水是酸性，不要用雨水打Kocide）
+              </li>
+              <li>
+                天气长时间的潮湿、或者下酸雨，会改变叶子表面的 pH ，可能会影响
+                Kocide 3000‐O 的性能，导致植物毒性或失效。
+              </li>
+              <li>
+                配药时，将喷雾罐装满二分之一。在液压或机械搅拌运行时将 Kocide
+                3000‐O 缓慢加入罐中，并继续加水。杀虫剂或展着剂等应最后添加。
+              </li>
+            </ol>
+          </td>
+        </tr>
+
+        <tr>
+          <td>下菜时间</td>
+          <td colspan="3">喷洒当天即可下菜</td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>用药间隔：</td>
+          <td colspan="3">
+            <ul>
+              <li>一般为7-14天</li>
+              <li>如果天气干燥，喷药间隔为：10-14天</li>
+              <li>
+                雨水多、叶片长时间潮湿或者有对作物进行高空灌溉，采用较短的喷药间隔：5-7天
+              </li>
+              <li>至少5天</li>
+              <li>
+                ⚠️如果喷洒铜制剂后没有下雨，也没有大的露水，短时间内再喷施铜制剂会有风险，因为上次施用的铜离子还没有释放出来，过多的铜离子被一次性释放到植物上，会灼伤植物组织，造成植物毒性，这也是为什么干燥的天气用药间隔要长一点。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>最佳使用时间</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                铜杀菌剂为浓缩药品最好在有露水时候使用，否则药品蒸发的快，也容易出现药害。
+              </li>
+              <li>最好在病症刚出现时开始使用</li>
+              <li>至少在雨前8个小时。</li>
+              <li>雨前喷洒效果好。</li>
+              <li>
+                农科院Ethan回复说：“铜产品等广谱保护性杀菌剂的建议是在下雨前喷洒，因为产品中对植物病原体起作用的铜离子会在叶子变湿时释放出来。因此，如果你在雨后喷洒，你就没有在叶子潮湿的时期保护植物，而这一时期正是病原体繁殖的时期。”
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="4">用药比例</th>
+        </tr>
+        <tr>
+          <td colspan="4">
+            以下列举只是常见作物，不是全部。如了解细节，请看标签
+            <ul>
+              <li>
+                以下浓度是按照每英亩50加仑水的用量算的，如果想增加用水量，可以根据每英亩总用药量计算浓度。浓度=每英亩用药量／每英亩用水量
+              </li>
+              <li>
+                一般情况下，每英亩用40-60加仑水量即可提供充分覆盖（作物太高、太密除外）。50
+                加仑为常规用量，此用水量适用于其他药品。
+              </li>
+              <li>
+                这里没有标注每年用量限制（我们通常达不到限制），如想了解，请看标签
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr style="background-color: rgb(228, 252, 252)">
+          <td>大田作物</td>
+          <td>疾病</td>
+          <td>用药量/英亩</td>
+          <td>浓度</td>
+        </tr>
+        <tr>
+          <td>大田玉米、甜玉米</td>
+          <td>细菌茎腐病</td>
+          <td>0.5-1.75磅</td>
+          <td>4.5-16g/加仑</td>
+        </tr>
+        <tr>
+          <td>土豆</td>
+          <td>早疫病、晚疫病</td>
+          <td>0.5‐1.75磅</td>
+          <td>4.5-16g/加仑</td>
+        </tr>
+        <tr>
+          <td>花生</td>
+          <td>尾孢叶斑病</td>
+          <td>0.75 ‐ 1.25 磅</td>
+          <td>
+            6.8-11g/加仑。在播种后35至40天，或在首次出现病害症状时开始喷洒。必要时每隔7-14天重复一次，如果天气潮湿，喷洒时间间隔缩短至7天；
+          </td>
+        </tr>
+        <tr>
+          <td>大豆</td>
+          <td>细菌性枯萎病、霜霉病</td>
+          <td>0.75‐1.5磅</td>
+          <td>6.8-13.6g/加仑</td>
+        </tr>
+        <tr>
+          <td>小麦、大麦、 燕麦</td>
+          <td>
+            镰刀菌枯萎病、长丝孢霉斑点病、白粉病、Stagonospora 叶
+            和颖花病、茎锈病*
+          </td>
+          <td>0.5‐0.75磅</td>
+          <td>4.5-6.8g/加仑</td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            除了“小麦、大麦、燕麦”的最短用药间隔为10天，其他作物遵循上面给出的通用范围。
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">环境有利于疾病发展时，使用较高的浓度。</td>
+        </tr>
+        <tr style="background-color: rgb(228, 252, 252)">
+          <td>蔬菜作物</td>
+          <td>疾病</td>
+          <td>用药量/英亩</td>
+          <td>浓度</td>
+        </tr>
+        <tr>
+          <td>豆类（干豆、青豆）</td>
+          <td>褐斑病、普通疫病、霜霉病、光晕疫病</td>
+          <td>0.5‐1.25磅</td>
+          <td>4.5-11g/加仑</td>
+        </tr>
+        <tr>
+          <td>甜菜、 甜菜叶</td>
+          <td>尾孢叶斑病</td>
+          <td>0.75‐2.0磅</td>
+          <td>6.8-18g/加仑</td>
+        </tr>
+        <tr>
+          <td>萝卜</td>
+          <td>链格孢属叶斑病、尾孢属叶斑病</td>
+          <td>0.75‐1.5磅</td>
+          <td>6.8-13.6g/加仑</td>
+        </tr>
+        <tr>
+          <td>芹菜</td>
+          <td>细菌性疫病、尾孢早疫病、晚疫病</td>
+          <td>0.75‐1.5磅</td>
+          <td>6.8-13.6g/加仑</td>
+        </tr>
+        <tr>
+          <td>
+            十字花科 (西兰花;卷心菜; 卷心菜，大白菜; 菜花; 青菜， 芥末;
+            羽衣甘蓝; 苤蓝)
+          </td>
+          <td>黑叶斑 (链格孢)， 黑腐 (黄单胞菌), 霜霉病</td>
+          <td>0.5-0.75磅</td>
+          <td>
+            4.5-6.8g/加仑*西兰花上可能会出现老叶变红，卷心菜包装叶可能会出现斑点。5.0-7.5g/加仑
+          </td>
+        </tr>
+        <tr>
+          <td>葫芦科 (哈密瓜， 黄瓜， 甜瓜， 南瓜， 西瓜）</td>
+          <td>
+            链格孢叶斑病、角叶病 斑点病、炭疽病、霜霉病、
+            胶茎枯萎病、白粉病、西瓜 细菌性果斑病(抑制)
+          </td>
+          <td>0.5‐1.25磅</td>
+          <td>4.5-11g/加仑</td>
+        </tr>
+        <tr>
+          <td>洋葱、大蒜、 韭菜</td>
+          <td>紫斑病，细菌性枯萎病、霜霉病</td>
+          <td>0.75‐1.5磅</td>
+          <td>6.8-13.6g/加仑 洋葱打药一般45加仑就够了，比例为7.5-15g/加仑</td>
+        </tr>
+        <tr>
+          <td>番茄</td>
+          <td>炭疽病、细菌性斑点病、灰叶霉病、晚 疫病、Septoria 叶斑病</td>
+          <td>0.75-1.75 磅</td>
+          <td>6.8-16g/加仑</td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <ul>
+              <li>
+                十字花科类蔬菜用药浓度较低，用药一定要注意。另外，对于十字花科类蔬菜，建议在在移栽后开始施用，或在出苗后不久，或在天气条件有利于疾病发展的情况下开始施用。
+              </li>
+              <li>如果治疗洋葱软腐病，卖家推荐17g兑1加仑水；</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>其他说明</td>
+          <td colspan="3">
+            <ul>
+              <li>预防阶段用最低浓度，随着疾病压力变大逐步提高浓度</li>
+              <li>
+                对于洋葱等作物预防病害，专家建议用Kocide而不是Cueva,
+                因为kocide里含的铜比Cueva 多得多，抑制病菌效果更好。
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="fullImage" />
+      <div id="captionText"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 蔻塞得铜杀菌剂 Kocide 3000-O</p>
+    </footer>
+  </body>
+</html>

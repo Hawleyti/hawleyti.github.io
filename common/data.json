@@ -1,39 +1,62 @@
 [
     {
         "name": "蚜虫",
-        "category": "蔬菜",
-        "desc": "春季育秧的关键要点...",
         "img": "https://lh3.googleusercontent.com/d/1E8LBbPHkHV_2kDAImOY0NPR10qYI2roG",
         "url": "../html_file/aphid.html" 
     },
     
     {
         "name": "洋葱",
-        "category": "冬天常吃的蔬菜",
-        "desc": "有机",
         "img": "https://lh3.googleusercontent.com/d/1kofustjcrNNJ4GyE1tcO0gI7EzZHUF8V",
         "url": "../html_file/onion.html"
     },
     {
         "name": "多杀菌素",
-        "desc": "有机农药",
         "keywords": ["多杀菌素", "spinosad", "杀虫", "蓟马", "小菜蛾", "夜蛾", "生物农药", "有机"],
         "img": "../images/20260202_drug02.jpg",
         "url": "../html_file/E_ Entrust SC.html"
         },
     {
         "name": "除虫菊酯",
-        "desc": "有机农药",
         "keywords": ["除虫菊酯", "spinosad", "杀虫", "蓟马", "小菜蛾", "夜蛾", "生物农药", "有机"],
         "img": "../images/20260202_drug09.png",
         "url": "../html_file/E_ PyGanic.html"
         },
     {
+        "name": "高岭土",
+        "keywords": ["高岭土", "spinosad", "杀虫", "蓟马", "小菜蛾", "夜蛾", "生物农药", "有机"],
+        "img": "../images/20260202_drug03.png",
+        "url": "../html_file/E_ Surround WP.html"
+        },
+    {
         "name": "BT",
-        "desc": "有机农药",
         "keywords": ["bt", "spinosad", "杀虫", "蓟马", "小菜蛾", "夜蛾", "生物农药", "有机"],
         "img": "../images/20260202_drug12.png",
         "url": "../html_file/E_ BT.html"
+        },
+    {
+        "name": "库伊瓦辛酸铜杀菌剂",
+        "keywords": [ "杀菌", "有机"],
+        "img": "../images/20260202_drug05.png",
+        "url": "../html_file/E_ Cueva_Fungicide_Concentrate.html"
+        },
+    {
+        "name": "蔻塞得铜杀菌剂",
+        "keywords": [ "杀菌", "有机", "3000"],
+        "img": "../images/20260202_drug13.png",
+        "url": "../html_file/E_Kocide 3000-O.html"
+        },
+    {
+        "name": "效自油",
+        "keywords": [ "杀菌", "有机", "3000"],
+        "img": "../images/20260202_drug04.jpg",
+        "url": "../html_file/E_xzy.html"
+        },
+    {
+        "name": "地瓜",
+        "keywords": [ "大田作物", "山芋"],
+        "img": "../images/20260210_digua19.png",
+        "url": "../html_file/F_sweet potato.html"
         }
 
 ]

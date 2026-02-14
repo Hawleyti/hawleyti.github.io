@@ -1,0 +1,1591 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>农业资源库</title>
+    <script src="../Control_file/common.js"></script>
+    <link rel="stylesheet" href="../Control_file/style.css" />
+    <style>
+      #field {
+        color: rgb(0, 0, 0);
+      }
+      .content .category {
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="replace_with_navbar"></div>
+    <!-- 导航栏 -->
+    <div class="location-tag">
+      <span>当前位置</span>
+      <span class="arrow">&gt;</span>
+      <span id="currentPage">大田作物</span>
+      <span class="arrow">&gt;</span>
+      <span class="arrow">地瓜</span>
+    </div>
+    
+    <!-- 左侧导航栏 -->
+   <div class="sidebar" id="sidebar">
+    <a href="#a1">一、基本信息</a>
+    <a href="#a2">二、🌱整地和移栽</a>
+    <div class="sub-menu">
+        <a href="#a2-1">整地</a>
+        <a href="#a2-2">移栽</a>
+    </div>
+    <a href="#a3">三、田间管理</a>
+    <a href="#a4">四、收获后管理</a>
+    <div class="sub-menu">
+        <a href="#a4-1">收获</a>
+        <a href="#a4-2">固化和存储</a>
+    </div>
+    <a href="#a5">五、病虫害</a>
+    <div class="sub-menu">
+        <a href="#a5-1">🦠病害</a>
+        <a href="#a5-2">🪲虫害</a>
+    </div>
+</div>
+
+<div class="toggle-btn" id="toggleBtn">☰</div>
+
+
+<div class="main-content" id="mainContent">
+
+    <div class="content">
+      <table>
+        <colgroup>
+          <col style="width: 15%" />
+          <!-- 第1列 -->
+          <col style="width: 45%" />
+          <!-- 第2列（文字列） -->
+          <col style="width: 20%" />
+          <!-- 第3列（图片） -->
+          <col style="width: 20%" />
+          <!-- 第4列（图片） -->
+        </colgroup>
+        <thead>
+          <tr>
+            <th id="a1" colspan="4" class="section-title">一、基本信息</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>品种</td>
+          <td class="category" colspan="3">
+            <img
+              src="../images/20260210_digua02.png"
+              onclick="openModal(this)"
+            />日本地瓜、黄先生地瓜、黄心地瓜
+          </td>
+        </tr>
+        <tr>
+          <td>温度要求</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                发芽：适合的温度范围在15~32摄氏度左右，在此范围内温度越高发芽越快。
+              </li>
+              <li>
+                生长：16~35摄氏度，块根形成与膨大的适宜温度是20~30℃，最佳的膨大温度是
+                25°C 到 30°C。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>适宜土质和PH值</td>
+          <td colspan="3">
+            <ul>
+              <li>排水良好肥沃的沙壤土。</li>
+              <li>PH值：5.5 - 6.5</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>种植时间</td>
+          <td colspan="3">
+            <ul>
+              <li>育苗：3月15日左右，地温不低于15度</li>
+              <li>
+                移栽：约5月15日-6月20日种。（白天地温高于15度，晚上地温高于12度，确定没有霜冻）
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>生长期 （天）</td>
+          <td colspan="3">120-130天</td>
+        </tr>
+        <tr>
+          <td>光照要求</td>
+          <td colspan="3">
+            受光不好的一般减产20-30%；红薯是短日照作物，每天日照时数在8-10小时范围内，能诱导红薯开花结实。
+            但营养生长，增加红薯块根产量，就需要较长时间的光照，以每天13个小时左右较好。
+          </td>
+        </tr>
+        <thead>
+          <tr>
+            <th id="a2" colspan="4" class="section-title">二、🌱整地和移栽：</th>
+          </tr>
+        </thead>
+          <tr>
+          <th id="a2-1" colspan="4">整地</th>
+        </tr>
+        <tr>
+          <td >整地时间</td>
+          <td colspan="3">
+            <ul>
+              <li>大田：4月初左右能下地就整地。</li>
+              <li>
+                菜园：也可以选择在4月初，但根据自家情况可适当延迟，保证在移栽前能完成撒肥培垄的工作。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>整地深度</td>
+          <td colspan="3">20-30cm</td>
+        </tr>
+        <tr>
+          <td>整地标准</td>
+          <td colspan="3">
+            地瓜地土壤要疏松，平整，不能有大的石块，不能积水；
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">大田： 撒粪 撒有机肥 起垄覆膜</td>
+          <td>
+            撒粪肥和有机肥、起垄覆膜都使用机器设备完成。起垄要求：垄面90cm、垄沟宽80cm、垄高20cm
+          </td>
+          <td colspan="2">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua29.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua32.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua53.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            ⚠️注意事项：
+            <ul>
+              <li>地瓜喜肥，但是氮太多，叶子会疯长，氮肥尽可能少上；</li>
+              <li>
+                有机肥施用时间：种植之前施入，有机肥中液态氨和硝酸盐都属于易挥发性氮肥，如果施用过早会导致氮流失。
+              </li>
+              <li>
+                起垄覆膜时要求土是湿的，手抓成团松手散开；抓好时机起垄覆膜，有利于保持住土壤墒情。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="5">
+            菜园：
+            <ul>
+              <li>撒粪</li>
+              <li>起垄</li>
+              <li>覆膜</li>
+            </ul>
+          </td>
+          <td>
+            【撒粪】：用锹先把粪肥、草木灰撒在种植面积内之后再用锹或耙子翻拌下让其和土壤混合均匀。
+          </td>
+          <td class="category">
+            <img
+              src="../images/20260210_digua28.png"
+              onclick="openModal(this)"
+            />
+          </td>
+          <td class="category">
+            <img
+              src="../images/20260210_digua58.png"
+              onclick="openModal(this)"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【起垄】：一垄种两排，垄面宽80cm、垄沟宽80cm、垄高18-20cm。<br />
+            大致步骤：先按垄面或垄沟宽度在2边用绳子拉线较直，然后用镐头或铁锹沿着直线铲土往垄上培，最后再用耙子耙平垄面并清理石头，也可小力稍压实些。
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua64.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua47.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua50.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua31.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            【覆膜】：先把膜平铺在垄上，两边地头用力拉紧并铲土压住，再沿着垄两边各1人用手同时稍用力拉紧绷然后铲土压住后再松手，这样一段段的直到整个垄的膜都压好，然后再把膜两边全部用土压住。如果垄比较长没法直接先平铺上，那就抬着膜边铺边压。<a
+              href="https://www.youtube.com/watch?t=119&v=K8EfkkHT1nk&feature=youtu.be"
+              target="_blank"
+              >参考视频</a
+            >（注：视频里是用平锹把膜直接压到地里，不适用硬地）
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua63.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua06.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua10.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th id="a2-2" class="category" colspan="4">移栽👇</th>
+        </tr>
+        <tr>
+          <td>栽苗时段</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                晴天：清晨至上午11点左右，下午3点左右至天黑，避开中午高温时间，高温移栽时苗发蔫严重不利于缓苗。
+              </li>
+              <li>阴天：全天都可以栽苗。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="6">【大田移栽步骤】</td>
+          <td colspan="3">
+            大田移栽采用移植机+人工方式，打孔和浇水使用机器，插苗覆土人工完成。株距30cm、行距40，种植深度10-15cm。具体步骤如下：
+            <ol>
+              <li>
+                打孔和浇水：
+                打眼的深度是10cm，打出来的孔要灌满水，打眼时需要错开打眼，种的时候株距就是错开的。
+              </li>
+              <li>摆苗：把地瓜苗按照插苗的方向摆放到株距之间。</li>
+            </ol>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3">
+            3、放黄豆：在苗眼里撒炒好的黄豆，每个苗眼3g左右（大概10粒）。
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            4、插苗：
+            <ul>
+              <li>
+                一手拿苗，一手用插苗工具对准薯苗根部第一个节点后倾斜45度往土里插，深度插至7-10cm后平着往里继续推，确保4-5个节点插入土壤中；
+              </li>
+              <li>地面上部露出3-4片叶子，约露出地表5-10cm，不要埋芯。</li>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1WSn_47wtNkjoUY5127uhJnkGNaKtxaZn/view"
+                  target="_blank"
+                  >参考视频</a
+                >
+              </li>
+            </ul>
+            <ul>
+              ⚠️【注意事项】
+              <li>插苗时遇到石头要拿出来，不然影响长地瓜。</li>
+              <li>要赶在孔里还有水的时候插苗。</li>
+              <li>
+                因为每一个苗的长短不一，拿苗时先看苗的长短、苗芯部分的位置，才衡量知道要插多少进土里，留太长或太短都会影响培土的进度。
+              </li>
+              <li>
+                插苗的深度要把握好，太浅了苗茎容易露在表面上，会被黑膜烤伤，太深了会影响产量。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            5、覆土：
+            <ul>
+              <li>把细土填入苗眼避免大土块；</li>
+              <li>
+                苗眼周围直径10cm左右的膜表面也覆盖一层土，防止水分蒸发，也能防止薯苗直接接触地膜造成烫伤；
+              </li>
+              <li>
+                不能埋芯，留5～10厘米的长（不够长的话可以稍微拉出一点再埋，太长的话，可以先掖进去一点再埋）
+              </li>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1l9nduoABw_s4GEUFnMntMFcIkUQJSAQ3/view"
+                  target="_blank"
+                  >参考视频</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua42.png"
+                  onclick="openModal(this)"
+                />
+                <figcaption>摆苗</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua38.png"
+                  onclick="openModal(this)"
+                />
+                <figcaption>放黄豆</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua40.png"
+                  onclick="openModal(this)"
+                />
+                <figcaption>插苗</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua05.png"
+                  onclick="openModal(this)"
+                />
+                <figcaption>覆土</figcaption>
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua30.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua44.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">【菜园移栽步骤】</td>
+          <td colspan="3">
+            菜园移栽方法和大田一样，只是打孔工具根据各家实际情况选用合适的，剪子或小刀等划开个圆孔。
+            <ul>
+              ⚠️注意事项：
+              <li>
+                大田移栽时如果当天苗量少且能完成当天工作量的情况下优先选择下午移栽，利于缓苗；
+              </li>
+              <li>
+                插苗前得提前掌握好插苗的方法、种植的深度，插苗时尽量一次插好，若是连续插几次话，苗就断了或受伤了，对缓苗不利，另外芯留太短后面埋土时容易埋芯，太长的话插进土里节点不够，会影响产量。
+              </li>
+              <li>
+                苗眼尽量用细土覆盖，土块大透风不保湿影响缓苗，根据情况及时补苗；
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua69.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua39.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua22.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua67.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th class="category" colspan="4">【插苗方式与产量对比实验】</th>
+        </tr>
+        <tr>
+          <td>平插法：</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua68.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+
+              <figure>
+                <img
+                  src="../images/20260210_digua57.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua34.jpg"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>斜插法：</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua33.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua19.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua55.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>结论：</td>
+          <td colspan="3">
+            不用平插方法结的地瓜个头大小悬殊，一颗苗结1-2个大的，其他全是小的。应该跟我们的扦插方式有关。<a
+              href="https://www.youtube.com/watch?v=1XaKXQsR2TM&t=744s"
+              target="_blank"
+              >参考视频链接：11-12分</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <th id="a3" colspan="4" class="section-title">三、田间管理（5个生长阶段）</th>
+        </tr>
+        <tr>
+          <th colspan="4">一、 扎根缓苗期 (移栽后至20天左右)</th>
+        </tr>
+        <tr>
+          <td rowspan="2">需关注</td>
+          <td colspan="3">
+            <ol>
+              <li>地瓜是否正常生根生长：主蔓开始生长，叶芽处开始长小芽。</li>
+              <li>
+                浇水：这个阶段需水量不多，遇干旱天气浇小水或不浇水，浇水不当会造成不结薯或者薯小。<a
+                  href="https://www.youtube.com/watch?t=1263&v=JucVDVTSmL8&feature=youtu.be"
+                  target="_blank"
+                  >参考视频：21:03~23:22</a
+                >
+              </li>
+              <li>
+                虫害：斑纹龟甲虫.<br />解决方案：
+                <ul>
+                  <li>
+                    少量时人工抓，等地瓜叶缓苗后，少量的虫子对地瓜危害不大，可以不用管。
+                  </li>
+                  <li>把路边、地头的草割掉。</li>
+                </ul>
+              </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua04.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua60.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua62.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan="4">二、 分枝结暑期（移栽后大约30天左右）</th>
+        </tr>
+        <tr>
+          <td rowspan="3">需观察：</td>
+          <td colspan="3">
+            <ul>
+              <li>是否开始结薯</li>
+              <li>是否需要浇水：如果遇到干旱天气，需要浇透水。</li>
+              <li>
+                除草：这个时期除草很关键，尤其苗眼的草会跟地瓜苗争肥、水，苗眼和垄沟的草都要及时除掉
+              </li>
+            </ul>
+            注意事项：
+            <ul>
+              <li>
+                草太大时，可以一手按着苗眼，另一只手像拧螺丝一样转圈拔，这样会减少伤害地瓜根。
+              </li>
+              <li>
+                大田种植垄沟虽使用机器除草，但机器没锄到的也要人工锄一下。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua20.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua36.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua59.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua41.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua37.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan="4">
+            三、 盛叶期（移栽后大约40～60天）<span style="color: rgb(255, 0, 0)"
+              >重点</span
+            >
+          </th>
+        </tr>
+        <tr>
+          <td>需关注：</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                提蔓或翻蔓：提蔓还是翻蔓需根据地瓜的长势和生长阶段来衡量，地瓜在盛叶期间（根须发白），长势茂密需要控旺时，可以翻蔓，不需要控旺时，提蔓即可。地瓜快进入膨大期时（根须发红），只能提蔓。翻蔓会影响叶片光和作用，影响地瓜产量。
+              </li>
+              <li>
+                提蔓时间：第一次大约在7月初-7月中旬，地瓜叶长到垄沟，并有一部分开始扎根时需要提蔓控旺，第二次提蔓根据地瓜长势，需要在薯块膨大期前完成。
+              </li>
+              <li>
+                提蔓方法：把地瓜藤蔓上的须根从地里面拔起来，不用把藤蔓翻过去，放回原处就好。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>注意事项：</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                提蔓时不要折断藤蔓，否则会刺激地瓜藤发新芽，导致营养都供给给叶子，块茎长不起来。
+              </li>
+              <li>
+                如果雨水多，或地瓜长势太旺，不通风，垄沟比较潮湿，藤蔓容易扎根，这时需要根据情况，及时提蔓。
+              </li>
+              <li>除草：有草就要锄。苗眼的草尽量拔干净，不然很快又长起来</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua11.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua25.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua08.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua21.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="4">四、 薯块膨大期：（移栽后70～100天左右）</th>
+        </tr>
+        <tr>
+          <td>需关注：</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                是否需要浇水：根据干旱情况浇水，地瓜虽然耐旱，但如果太干旱也得浇水，否则影响产量。块茎膨大期，土壤攥在手里能成型就可以，浇水浇多深，地瓜就长多长。
+              </li>
+              <li>
+                浇水深度：10cm左右，能渗下去大概20cm以内<a
+                  href="https://youtu.be/JucVDVTSmL8?t=2220"
+                  target="_blank"
+                  >参考视频</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua71.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua23.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua24.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua14.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="4">五、 茎叶衰退期</th>
+        </tr>
+        <tr>
+          <td>需关注</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                地温：接近收获时，要勤看天气和地温，地瓜收获时地温在13~15摄氏度，最低不能低于10摄氏度
+              </li>
+              <li>
+                注：季末浇水过多会导致块茎开裂，从而缩短其储存寿命，为了避免这种情况，请在计划收获红薯作物前三到四周减少浇水。
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <thead>
+          <tr>
+            <th id="a4" colspan="4" class="section-title">四、收获后的管理：</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <th id="a4-1" colspan="4">收获👇</th>
+        </tr>
+        <tr>
+          <td>收获时间</td>
+          <td colspan="3">
+            9月中下旬～10月初霜冻前：地温在13~15摄氏度，最低不能低于10摄氏度，选择晴天。
+            <ul>
+              注意：
+              <li>
+                如果下雨，等雨后5天以上才可收获，红薯水分多的时候收获会出现黑霉病，土壤很潮湿，红薯的储藏性降低。
+              </li>
+              <li>
+                避免在天气特别干燥的情况下收获红薯，地瓜会受伤，导致一些病菌进入，影响存储。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">收获步骤</td>
+          <td colspan="3">
+            <ol>
+              <li>先把垄沟的秧子切断（机器或刀具）</li>
+              <li>再用镰刀割掉垄面的地瓜藤，留10cm左右秧茬便于手提。</li>
+              <li>
+                大田如果要保留秧那还需要耙秧，将割掉的地瓜秧两垄合成一垄，便于起地瓜和后期打包地瓜秧（车道的位置需要向两侧多合并两垄留出车位）如果不需要留地瓜秧，机器可以提前打碎，人工就不用割了，简单割一下机器没有打掉的就可以了，这样省时省力。
+              </li>
+              <li>揭掉黑膜。</li>
+              <li>
+                起地瓜机收获地瓜。随着机器将地瓜松动后，坐在机器后面的两个人迅速将地瓜提起（菜园可选用叉子或尖锹直接挖，但要注意下锹的角度和距离，避免伤到地瓜）
+              </li>
+              <li>
+                用剪刀分离地瓜和藤，并放在垄台上愈合伤口，之后分类、装框、储藏。
+              </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua73.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua09.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua27.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>注意事项</td>
+          <td colspan="3">
+            <ul>
+              <li>需根据地瓜长的深浅来调整挖地瓜机器（或工具）的下土深度；</li>
+              <li>注意轻拿轻放，不要给红薯外皮带来损伤。</li>
+              <li>
+                把剪好的地瓜分类摆在垄台上，地瓜之间留有空间，利于愈合伤口。
+              </li>
+              <li>早上温度低时可以先割秧子，等温度上升之后再起红薯。</li>
+              <li>
+                下午起红薯不要太晚，避免温度下降，地瓜收不回去，造成冻伤。
+              </li>
+              <li>
+                如果地瓜被雨淋了， 无论地瓜表皮是否有损伤，都不适合长期存储。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th id="a4-2" colspan="4">固化👇</th>
+        </tr>
+        <tr>
+          <td>固化： 温湿度</td>
+          <td colspan="3">
+            <ul>
+              <li>温度为29°C，湿度为90％，期间一定要注意换气通风</li>
+              <li>
+                注：地瓜在高温高湿的情况下容易凝结水滴，如果通风不好，最底层的地瓜会很湿。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>固化时间</td>
+          <td colspan="3">
+            3-7天：
+            <ul>
+              <li>
+                固化的时长根据固化的状态灵活调整，如果温湿度达不到，可适当延长固化时间。
+              </li>
+              <li>。温度低时，湿度不能太高，低温高湿，伤口大的容易长白霉。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>固化标准</td>
+          <td colspan="3">
+            <ul>
+              <li>地瓜伤口处（连接地瓜藤的那头）有黑色糖块</li>
+              <li>地瓜表皮变结实</li>
+              <li>个别地瓜开始长新芽</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>固化 场地要求</td>
+          <td colspan="3">
+            <ul>
+              <li>提前消毒、通风。</li>
+              <li>温湿度比较稳定。</li>
+              <li>耐潮湿</li>
+              <li>
+                加温加湿方式：一般用取暖器加温，地上泼水加湿，但是泼水的话需要考虑是否会伤害房子，地是否平，是否会有局部地方淤积水反而滋生细菌，密切关注房间里各个角落的温度，不能只看一个部位。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>固化注意事项</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                若是地瓜淋雨了或者地瓜表面水分很大，需加强通风固化。死角空气流通不好，可以加风扇吹。
+              </li>
+              <li>
+                先加温再加湿，如果低温高湿，破损位置会发霉，这个阶段注意多观察。
+              </li>
+              <li>
+                温度和湿度得成正比例调整参数，不能只调一个数值，（比如温度22-23摄氏度，湿度70%左右就行了）如果固化期达到5天多数都发芽的迹象，就可以停止加溫、加湿。溫度、湿度不达标也会延长固化时间。
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <th colspan="4">存储👇</th>
+        </tr>
+        <tr>
+          <td>存储： 温湿度</td>
+          <td colspan="3">温度12.5-15度，湿度70%-80%；</td>
+        </tr>
+        <tr>
+          <td>存储 场地要求</td>
+          <td colspan="3">
+            <ul>
+              <li>温度不能低过10度</li>
+              <li>通风</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>存储步骤</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                入库前用Oxidate杀菌剂（7.5ml/加仑水）或者1%的84消毒水整体消毒一遍
+              </li>
+              <li>将固化好的地瓜分类（同时掰芽）、装筐、存储</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>存储注意事项</td>
+          <td colspan="3">
+            <ul>
+              <li>
+                定期检查地瓜状态（有无发芽、发霉、腐烂、干瘪、被老鼠咬等）
+              </li>
+              <li>每天做好温湿度监测记录</li>
+              <li>做好出入库记录</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">其它小量固化和存储方式： (仅供参考)</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://youtu.be/_hPl5MPgNwM?t=405" target="_blank"
+              >参考一</a
+            >
+          </td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua07.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua17.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua49.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://youtu.be/PTxL4vrem5o" target="_blank">参考2：</a
+            >防水包+阳光房
+          </td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua66.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://youtu.be/AZdJzWDqOPI" target="_blank">参考3：</a
+            >自制便携塑料棚
+          </td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua43.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua26.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="https://youtu.be/WayMXK2ClxE" target="_blank">参考4：</a
+            >室内散光+厚毯
+          </td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua52.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua70.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua52.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <thead>
+          <tr>
+            <th id="a5" colspan="4" class="section-title">五、病虫害：</th>
+          </tr>
+        </thead>
+        <tr>
+          <th id="a5-1" colspan="4">🦠病害</th>
+        </tr>
+        <tr>
+          <td rowspan="4">【黑腐病】</td>
+          <td colspan="2">
+            【症状】
+            <ul>
+              <li>
+                症状通常在收获时或贮藏期间出现，红薯出现黑色的腐烂症状，腐烂部位干燥结实，黑色区域从红薯的表皮往里面延伸。
+              </li>
+              <li>感染通常始于伤口或侧根，并且在储存过程中会更加严重。</li>
+            </ul>
+          </td>
+          <td class="category">
+            <img
+              src="../images/20260210_digua56.png"
+              onclick="openModal(this)"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【危害】：
+            <ul>
+              <li>如果用被感染的红薯育苗，则种植后的植物也可能​​出现症状。</li>
+              <li>
+                被感染的苗在土壤表面以下会形成暗沉的溃疡，严重的感染会导致生长迟缓，枯萎甚至死亡。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【防治措施】：
+            <ol>
+              <li>
+                不要在过去的3-4年间已种植红薯并发生过黑腐病的田地再次种植红薯。
+              </li>
+              <li>
+                红薯育苗时要对种子进行处理，可以施用杀菌剂杀一下红薯表面的有害病菌，可以用Oxidate
+                5.0处理浸泡红薯种子1分钟，稀释比例1:100.
+              </li>
+              <li>红薯采苗的时候至少得选取距离地表2cm以上处开始剪。</li>
+              <li>剪刀要在修剪期间要经常消毒，防治传染；</li>
+              <li>
+                收获地瓜以后要在29温度下，85-90%的湿度下固化10天左右帮助红薯愈合伤口，防止在存储期间再次发生感染。
+              </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">按照以上措施实行，红薯的黑腐病患病机率能下降。</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3">【镰刀菌根腐病】</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua03.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua13.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【症状】
+            <ul>
+              <li>
+                根腐病通常表现为圆形病变，带有浅色和深棕色同心环。根腐烂延伸根的中心部位，导致地瓜空心。
+              </li>
+              <li>
+                感染的组织变成深棕色，边缘为浅棕色。扩大的病灶变得干燥，凹陷，在病灶的外部或内腔中可见白色菌丝体。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【危害】：
+            镰刀菌根腐病发生在收割或收获后受伤的红薯上，收割条件会增加对根的伤害，从而潜在地增加镰刀菌根腐的发生率，其中包括：
+            <ul>
+              <li>当土壤凉爽潮湿时收获</li>
+              <li>土壤过干时收获</li>
+              <li>
+                固化前将根暴露在极端温度下
+                镰刀菌根腐病一旦感染，将在整个贮藏过程中继续发展。虽然镰刀菌根腐病可以在很宽的温度范围内（12-35度）进行，但温度在23-28度的范围内腐烂最多。此外，较高的相对湿度（>
+                90％）也会增加使病情加重并导致更高的损失。
+              </li>
+            </ul>
+            【防治措施】
+            <ol>
+              <li>只有无病红薯才能拿来作为红薯种子使用；</li>
+              <li>采苗时在土壤表面以上至少2 cm采苗；</li>
+              <li>避免在已知受镰刀菌侵染的田地上种植，实施5年轮作；</li>
+              <li>减少收获和收获后处理过程中的伤薯苗</li>
+              <li>收获的时候要对采收工具进行消毒处理；</li>
+              <li>收获后立即适当固化；</li>
+              <li>
+                可以使用Oxidate
+                5.0杀菌剂，稀释比例1:256，刚出现症状的时候，病情严重的时候稀释比例1:100；
+              </li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="4">【黑痣病】</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua65.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua72.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【症状】
+            <ul>
+              <li>
+                真菌仅在红薯表皮中生长，存储过程并在高湿度条件下产生孢子，患病区域为紫色或灰褐色至黑色，在储存期间病情会非常缓慢地扩大。通常，在根部只看到一些分散的病灶，但在严重的情况下，根部的几乎整个表面都可能受到影响。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【危害】
+            <ul>
+              <li>
+                高湿度传播比较迅速，在土壤中只能生存1-3年，患病主要因为土壤里面的病菌侵入受伤红薯块里面。真菌可以从受感染的种子根部生长到由该根部育出的苗上。然后带入田间，继续感染该苗产生的新红薯上。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【预防措施】
+            <ol>
+              <li>选用无这种疾病的红薯育苗</li>
+              <li>
+                选种子时检查每个根，弄湿根部，可以更容易地观察到鱼鳞斑状的病灶。
+              </li>
+              <li>将根浸入杀真菌剂中杀死孢子；</li>
+              <li>采苗时在土壤表面以上至少2 cm采苗；</li>
+              <li>
+                有机质含量高的粘土中这种菌存活3-4年，需要3-4年轮作一次。沙壤土2-3年轮作一次。
+              </li>
+              <li>收红薯的时候要对收获的工作，存储的地方消毒。</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="4">【冻害】</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua46.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua54.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua12.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【症状】
+            <ul>
+              <li>
+                冷害有多种表现形式，
+                最常见的症状包括表面出现凹陷的麻点、地瓜干瘪萎缩、易感染真菌腐烂（尤其是由青霉属引起的蓝霉）。
+                其他常见症状包括地瓜心出现硬核，煮熟后该硬核也不会消失，且有坏地瓜味；地瓜肉发黑、有空隙；另外，受冻害的地瓜通常发芽较少或无法发芽，影响种子质量。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【发病条件】
+            <ul>
+              <li>
+                地瓜对
+                12.5°C以下的温度都比较敏感，最低不能低于10度，否则易遭受冷害。冷害的程度是由温度和暴露的时间共同决定的。
+                例如，在 40°F (4°C) 下 1 小时所造成的伤害可能与在 45°F (7°C) 下
+                5 小时造成的伤害程度相同。偶尔一次低于 10°C
+                可能不会造成明显的伤害，但多次短暂性暴露在低于10度的环境下可能会造成严重损害。当暴露在10度的条件下，短短
+                3 天，地瓜就会出现硬核。如果暴露在
+                1.7度的条件下，地瓜一天内就会出现硬核。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【预防措施】
+            <ul>
+              <li>
+                在地温为12.5~15摄氏度，最低不低于10摄氏度时收获，以确保不造成冻害。
+              </li>
+              <li>
+                切勿将收获的地瓜留在田间过夜，防止夜间低温造成严重冻害。
+                （低温造成的损坏可能会在数周甚至数月后才出现。）
+              </li>
+              <li>将地瓜存储在12.5-15度的条件下，最低不能低于10°C 。</li>
+              <li>运输、销售时要注意保温。</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <th id="a5-2" colspan="4">🪲虫害</th>
+        </tr>
+        <tr>
+          <td rowspan="3">【地瓜跳蚤甲虫】</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua51.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua01.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【出现时间&危害】
+            <ul>
+              <li>
+                成虫是最早出现在4月下旬至5月初出现，幼虫以植物根部为食，降低产量，成虫咀嚼叶子上的细小孔，能传播病毒和疾病，并且造成植株无法进行光合作用减产。喜欢春天，尤其干燥温度高些的时候数量比较多，夏天天气炎热时数量会少一些。一年一到两代。
+              </li>
+              <li>
+                观察植株的幼苗，跳蚤甲虫喜欢吃幼苗的叶子，幼苗上若有孔出现就要开始采取防治办法。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【防治方法】
+            <ul>
+              <li>
+                高岭土12.5-25lbs/英亩，每隔7-14天施用一次。下雨前避免使用，雨后重新施用。
+              </li>
+              <li>喷施除虫菊酯：7-15ml稀释至1加仑水；</li>
+              <li>喷施多杀菌素：88-177ml打1英亩；</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td rowspan="4">【线虫】</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua61.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua45.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【危害】
+            <ul>
+              <li>
+                幼虫吃块茎和肉质根，并破坏发芽的种子和幼苗。早期进食通常表现为浅洞。后期进食表现为参差不齐的深洞。一个根可能有10个或更多的孔由线虫引起。几乎所有类型的蔬菜都可能受到严重破坏，但最常遭受袭击的作物包括块根作物（胡萝卜，土豆，萝卜，地瓜和萝卜），玉米幼苗，草莓和番茄。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【出现时间】
+            <ul>
+              <li>5月末-6月开始观察；</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【防治方法】
+            <ol>
+              <li>避免在被侵染的土壤中种植蔬菜。</li>
+              <li>
+                避免在先前已停止种植的土壤中种植蔬菜。草地中可能已经有线虫存在。
+              </li>
+              <li>
+                正式种植以前，在地里面先种上诱饵作物来诱杀线虫，诱饵作物包括豌豆，豆类，玉米，土豆、胡萝卜等，种植3-10英尺远，深度2-4英寸。
+              </li>
+              <li>找排水良好的土壤种植，这样的土壤线虫不容易生存。</li>
+              <li>
+                观赏植物，例如紫苑，福禄考，剑兰和大丽花对线虫很有吸引力。不要
+                将观赏植物放在蔬菜作物附近，减少线虫问题。
+              </li>
+              <li>秋天翻地把线虫暴露出来喂鸟。</li>
+              <li>土壤施用除虫菊酯，7-15ml稀释至1加仑水；</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="4">【蛴螬】</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua16.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua15.png"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【危害】
+            <ul>
+              <li>
+                破卵出来的金龟会移动到红薯块茎部位，啃噬或刮出伤痕损害红薯，地瓜降低质量而且还会从伤痕部位诱发病原菌感染。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【出现时间】
+            <ul>
+              <li>7月-8月份</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【防治方法】
+            <ul>
+              <li>
+                未腐熟的堆肥水分含量多，会给蛴螬产卵及孵化提供有利的条件，所以应使用腐熟好的堆肥为好。
+              </li>
+              <li>
+                根据蛴螬的生命周期，5月份在成虫未产卵之前施用塞文杀虫剂控制成虫产卵。
+              </li>
+              <li>
+                <a href="https://youtu.be/JucVDVTSmL8?t=2220" target="_blank"
+                  >细菌性线虫</a
+                >可以寄生在蛴螬身上
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="5">【根结线虫】</td>
+          <td colspan="3">
+            <div class="enemies">
+              <figure>
+                <img
+                  src="../images/20260210_digua35.jpg"
+                  onclick="openModal(this)"
+                />
+              </figure>
+              <figure>
+                <img
+                  src="../images/20260210_digua48.jpg"
+                  onclick="openModal(this)"
+                />
+              </figure>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【危害】
+            <ul>
+              <li>
+                它们是生活在土壤和植物根部的微小圆虫。他们通过以针状口器取食根细胞来伤害植物。根系可能受损到植物无法吸收水分和养分的地步。
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【防治时间】
+            <ul>
+              <li>播种前和播种过程中。可持续管理需要长期计划。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【线虫阈值界定】
+            <ul>
+              <li>记录损害症状，并分析根和土壤中线虫的存在和密度。</li>
+              <li>
+                有机土壤中马铃薯根结线虫的阈值水平在4-8个卵/
+                cc土壤之间。低至1个线虫/ cc已对马铃薯造成破坏；
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            【防治措施】
+            <ol>
+              <li>
+                轮作：和谷物类的作物进行轮作；（小麦，黑麦，燕麦，大麦，玉米和苏丹草都不是根结线虫的寄主，但是lesion线虫的寄主。但是，洋葱，胡萝卜，生菜，芹菜，大豆，三叶草，苜蓿和豆类是根结线虫的良好寄主，但不是lesion线虫的寄主。）
+              </li>
+              <li>
+                许多生物熏蒸作物，包括苏丹草，白芥末和油菜籽，都是根部线虫的寄主，并且会增加种群数量，直到将其作为绿色肥料掺入土壤中为止，此时它们的分解产物对土壤有毒。线虫。研究表明，苏丹草杂种“
+                Trudan 8”可以有效地用作生物熏蒸剂，以减少根部病变线虫种群。
+              </li>
+              <li>
+                卫生：在受侵染的田间使用后，请清洗设备。避免通过设备和车辆等将土壤从受侵染的田地转移到未受侵染的田地。也应限制/避免受侵染的田地的地表径流。
+              </li>
+              <li>
+                控制杂草：根茎病线虫的宿主是许多常见的杂草，包括羊腿，红根藜，普通马齿,、豚草，普通蒲公英和野芥菜。因此，有效的杂草处理也很重要。
+              </li>
+              <li>
+                塑料加热：在塑料下进行太阳能加热，都是控制线虫的廉价而简单的方法。要杀死土壤中的线虫，可在烤箱中或通过日晒将少量潮湿的土壤加热到140°F。
+              </li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </div>
+    </div>
+    
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="fullImage" />
+      <div id="captionText"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 地瓜</p>
+    </footer>
+  </body>
+</html>

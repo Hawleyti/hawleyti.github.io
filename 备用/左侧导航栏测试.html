@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>左侧导航栏示例</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 左侧导航栏 */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #1f2937;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+/* 折叠状态 */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+/* 导航按钮 */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sidebar a:hover {
+    background: #374151;
+}
+
+/* 折叠按钮 */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    background: #1f2937;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+/* 主内容区域 */
+.content {
+    margin-left: 220px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+/* 折叠时内容区域变化 */
+.content.collapsed {
+    margin-left: 60px;
+}
+
+/* 模拟大段文字 */
+.section {
+    height: 600px;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 左侧导航 -->
+<div class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+
+    <a href="#section1">🌾 农药介绍</a>
+    <a href="#section2">🐛 病虫害防治</a>
+    <a href="#section3">🧪 产品说明</a>
+    <a href="#section4">📊 数据分析</a>
+    <a href="#section5">📞 联系我们</a>
+</div>
+
+<!-- 主内容 -->
+<div class="content" id="content">
+
+    <h2 id="section1">农药介绍</h2>
+    <div class="section">这里是大量文字内容...</div>
+
+    <h2 id="section2">病虫害防治</h2>
+    <div class="section">这里是大量文字内容...</div>
+
+    <h2 id="section3">产品说明</h2>
+    <div class="section">这里是大量文字内容...</div>
+
+    <h2 id="section4">数据分析</h2>
+    <div class="section">这里是大量文字内容...</div>
+
+    <h2 id="section5">联系我们</h2>
+    <div class="section">这里是大量文字内容...</div>
+
+</div>
+
+<script>
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+
+    sidebar.classList.toggle("collapsed");
+    content.classList.toggle("collapsed");
+}
+</script>
+
+</body>
+</html>
